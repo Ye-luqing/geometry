@@ -1,0 +1,218 @@
+\documentclass[twoside,11pt]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+%\usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+% \usepackage{latexdef}
+\def\ZZ{\mathbb{Z}} \topmargin -0.40in \oddsidemargin 0.08in
+\evensidemargin 0.08in \marginparwidth 0.00in \marginparsep 0.00in
+\textwidth 16cm \textheight 24cm \newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献} \def \qed {\hfill \vrule height6pt
+  width 6pt depth 0pt} \topmargin -0.40in \oddsidemargin 0.08in
+\evensidemargin 0.08in \marginparwidth0.00in \marginparsep 0.00in
+\textwidth 15.5cm \textheight 24cm \pagestyle{myheadings}
+\markboth{\rm \centerline{}} {\rm \centerline{}}
+\begin{document}
+\title{\huge{\textbf{多元反函数定理的一个证明}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}} \date{}
+\maketitle
+  
+% ----------------------------------------------------------------------------------------
+% ABSTRACT AND KEYWORDS
+% ----------------------------------------------------------------------------------------
+
+
+\textbf{\small{摘要}:}仅利用微分中值定理,以及微扰不改变一个可逆矩阵的可
+逆性,给出了多元反函数定理的一个证明. \smallskip
+
+\textbf{\small{关键词}:}多元反函数定理;微分中值定理;可逆矩阵\smallskip
+
+\textbf{\small{中图分类号}:}O172.1
+  
+\vspace{30pt} % Some vertical space between the abstract and first section
+  
+% ----------------------------------------------------------------------------------------
+% ESSAY BODY
+% ----------------------------------------------------------------------------------------
+多元反函数定理是多元微分学中的核心定理之一.利用它能直接推出隐函数定理.其
+叙述如下:
+\begin{theorem}[多元反函数定理\cite{tao}]
+  设 $E$ 是 $\mathbf{R}^n$ 的开集合,并设 $T:E\to
+  \mathbf{R}^n$ 是在 $E$上连续可微的函数.假设 $\mathbf{x_0}\in E$ 使得
+  线性变换$f'(\mathbf{x_0}):\mathbf{R}^n\to \mathbf{R}^n$ 是可逆的,那么
+  存在含有$\mathbf{x_0}$ 的开集 $U\subset E$ 以及含
+  有 $f(\mathbf{x_0})$ 的开集$V\subset
+  \mathbf{R}^n$,使得 $f$ 是从 $U$到 $V$ 的双射,而且逆映射$f^{-1}:V\to
+  U$ 在点 $f(\mathbf{x_0})$ 处可微,而且
+$$
+(f^{-1})'(f(\mathbf{x_0}))=(f'(\mathbf{x_0}))^{-1}.
+$$
+\end{theorem}
+\bigskip\bigskip现在,笔者来阐述自己发现的证明,这种证明只用到了微分中值
+定理以及简单的矩阵知识.为此,我们先来看一个引理:
+\begin{lemma}[微扰不改变可逆矩阵的可逆性]
+  设 $A_{n,n}$ 是一个 $n$ 行 $n$ 列的可逆矩阵,其第 $i$ 行,第 $j$ 列的项
+  记为 $a_{ij}$.则存在 $\varepsilon>0$,使得 $\forall 0\leq
+  \delta_{ij}<\varepsilon$,矩阵
+$$
+B=\begin{pmatrix}
+  a_{11}+\delta_{11}&a_{12}+\delta_{12}&\cdots&a_{1n}+\delta_{1n}\\
+  a_{21}+\delta_{21}&a_{22}+\delta_{22}&\cdots&a_{2n}+\delta_{2n}\\
+  \vdots&\vdots&\vdots&\vdots\\
+  a_{n1}+\delta_{n1}&a_{n2}+\delta_{n2}&\cdots&a_{nn}+\delta_{nn}\\
+\end{pmatrix}
+$$
+可逆.
+\end{lemma}
+\begin{proof}[证明]
+由于矩阵可逆和行列式不为0等价,因此我们只用证明矩阵 $A_{n,n}$ 经过任何微小
+的扰动后行列式不为0即可.我们来看 $n^2$ 元函数 $\det A_{n,n}$,该函数的 $n^2$ 个自变量分别是矩
+  阵$A_{n,n}$ 中的各个项,易得该 $n^2$ 元函数关于各个自变量连续.当矩
+  阵 $A$可逆时,$\det A_{n,n}\neq 0$.此时对于每个自变
+  量 $a_{ij}$ 来说,存在$\va_{ij}>0$,使得 $\forall
+  0\leq\delta_{ij}<\va_{ij}$,当 $a_{ij}$ 被$a_{ij}+\delta_{ij}$ 替代
+  时,$\det A_{n,n}$ 依然非零,而且正负符号和原来的 $\det A_{n,n}$ 相比没
+  有变号.
+
+  令 $\va=\min
+  \{\va_{11},\va_{12},\cdots,\va_{1n},\va_{21},\va_{22},\cdots,\va_{2n},\cdots,\va_{n1},\va_{n2},\cdots,\va_{nn}\}$,即可得引理.
+\end{proof}
+\bigskip引理1可以直接得到如下推论:
+
+\begin{corollary}
+  存在含有 $\mathbf{x_0}$ 的开凸集 $U'$,使得 $f$ 在 $U'$ 上的每一点处的导
+  数可逆.
+\end{corollary}
+\bigskip
+下面我们来证明 $f:U'\to f(U')$ 是可逆的.
+\begin{theorem}
+  $f:U'\to f(U')$ 是可逆的.
+\end{theorem}
+\begin{proof}[证明]
+  $f$ 是从 $\mathbf{R}^n$ 的子集 $U'$ 到 $\mathbf{R}^n$ 的子
+  集 $f(U')$的函数,我们将$f$ 看成 $(f_1,\cdots,f_n)$,其中 $\forall
+  1\leq i\leq n$,$f_i$ 是从$\mathbf{R}^n$ 的子集 $U'$ 到 $\mathbf{R}$
+  的子集的函数,具体
+  地,若$f((a_1,\cdots,a_n))=(b_1,\cdots,b_n)$,则
+  $f_i((a_1,\cdots,a_n))=b_i$.由于 $f$ 在 $U'$ 上连续可
+  微,因此 $f_i$ 在$U'$ 上亦连续可微.由于 $f$ 在 $U'$ 上的导数处处可逆,
+  因此 $f_i$ 在 $U'$ 上的导数亦处处可逆.\\
+
+假若 $f:U'\to f(U')$ 不是可逆的,则存在 $\mathbf{m}\neq \mathbf{n}\in
+U'$,使得
+$$
+f(\mathbf{m})=f(\mathbf{n}).
+$$
+则
+$$
+f_i(\mathbf{m})=f_i(\mathbf{n}).
+$$
+根据微分中值定理,存在 $\xi=
+\lambda\mathbf{m}+(1-\lambda)\mathbf{n}\in U'$,其中 $0<\lambda<1$,使得
+$$
+f_i'(\xi)=\mathbf{0}.
+$$
+这与 $f_i$ 在 $U'$ 上的导数处处可逆矛盾.可见假设不成立,因此 $f:U'\to f(U')$ 是可逆的.
+\end{proof}
+\bigskip
+下面我们来证明 $f(U')$ 也是 $\mathbf{R}^n$ 中的一个开集.为此,我们先证明
+如下结论:
+\begin{lemma}
+  若 $f:A\to f(A)$ 是连续的可逆函数,其中 $A\subset \mathbf{R}^n$,$f(A)\subset
+  \mathbf{R}^n$,则 $f^{-1}:f(A)\to A$ 也是连续可
+  逆函数.
+\end{lemma}
+\begin{proof}[证明]
+  证明仅仅是依据定义进行简单的验证,留给读者.
+\end{proof}
+
+\begin{lemma}
+  若 $f:A\to f(A)$ 是连续函数,其中 $A\subset \mathbf{R}^n$,$f(A)\subset
+  \mathbf{R}^n$,且  $f(A)$ 是 $\mathbf{R}^n$ 中的一个开集.则
+  $f^{-1}(A)$ 也是 $\mathbf{R}^{n}$ 中
+  的一个开集.
+\end{lemma}
+\begin{proof}[引理证明]
+  见文献\cite{spivak}.
+\end{proof}
+引理2和引理3 合起来有如下推论:
+\begin{corollary}
+  若 $f:A\to f(A)$ 是连续的可逆函数,其中 $A\subset \mathbf{R}^n$,$f(A)\subset
+  \mathbf{R}^n$,则 $f$ 把 $\mathbf{R}^n$ 中的开集
+  $K\subset A$ 映射成 $\mathbf{R}^n$ 中的开
+  集 $f(K)$.
+\end{corollary}
+
+下面我们来证明多元反函数定理.
+\begin{proof}[证明]
+  由于 $f:U'\to f(U')$ 可微,因此连续,且我们在定理2里表明了 $f:U'\to
+f(U')$ 可逆,且 $U'$ 是 $\mathbf{R}^n$ 中的开集,因此根据推论2,$f(U')$
+是 $\mathbf{R}^n$ 中的开集.令 $U'=U,f(U')=V$,即可得到从 $U$ 到 $V$ 的
+双射 $f$.至于 $f^{-1}$ 的可微性,只是寻常的验证,此处从略,读者可参看文献 \cite{tao}.
+\end{proof}
+% BIBLIOGRAPHY
+% ----------------------------------------------------------------------------------------
+%
+\begin{thebibliography}{}
+\bibitem[1]{tao}Terence Tao.陶哲轩实分析[M].王昆扬,译.北京:人民邮电出版
+  社,2008:376
+\bibitem[2]{spivak}Michael Spivak.流形上的微积分[M].齐民友,路见可,译.北
+  京:人民邮电出版社,2006:11
+
+  % \small{
+%    
+  % \bibitem[2]{rudin}Walter Rudin.数学分析原理[M].赵慈庚,蒋铎,译.原书
+  %   第3版.北京:机械工业出版社,2004:202
+
+  % \bibitem[3]{apostol}Tom M.Apostol .数学分析[M].邢富冲,邢辰,李松
+  %   洁,贾婉丽,译.原书第2版.北京:机械工业出版社,2006:302-303 }
+\end{thebibliography}
+% ----------------------------------------------------------------------------------------
+\centering\title{{\textbf{{A proof of the inverse function theorem}}}}
+\bigskip\\\author{\small{Luqing Ye}\\{\small{College of Science,Hangzhou Normal
+      University,Hangzhou~310036,China}}}
+\maketitle
+\begin{abstract}
+  By using the differential mean value theorem and a small
+  perturbation does not affect the invertibility of an invertible
+  matrix,we give a proof of the inverse function theorem.
+\end{abstract}
+\textbf{\small{Keywords}:}inverse function theorem;differential mean
+value theorem;invertible matrix
+\end{document}
+
+
+
+
+
+
+
+
+
+
