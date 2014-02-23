@@ -1,0 +1,86 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}[section]
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{解三次方程——一种行不通的思路}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+根据分解定理,寻求三次方程 $x^3 + bx^2 + cx + d = 0$ 的根 $x,y,z$等价于求解下述
+方程组:
+$$
+\begin{cases}
+  x+y+z = -b\\
+xy + yz + xz = c\\
+xyz = -d.\\
+\end{cases}
+$$
+其中 $x,y,z$ 是复数.为了求解方程组,我们先介绍一种思路.但是这是一种行
+不通的思路.
+\section{行不通的思路}
+\label{sec:1}
+复数 $x,y,z$ 在复平面上对应于点 $X,Y,Z$,这是三角形
+的三个顶点(当然,如果 $X,Y,Z$ 有重合,则三角形为退化的三角形,因此我们假设 $X,Y,Z$ 两两不重合).由于
+$x+y+z=-b$,因此三角形的重心对应于复数 $\frac{-b}{3}$.我们只要将三个顶
+点 $X,Y,Z$ 平移成 $X',Y',Z'$,其中 $X',Y',Z'$ 对应的复数分别为
+$x',y',z'$,且 $x'=x+\frac{b}{3},y'=y+\frac{b}{3},z'=z+\frac{b}{3}$.就
+得到了重心位于原点的三角形 $X'Y'Z'$.可得
+$$
+\begin{cases}
+  x'+y'+z'=0\\
+x'y'+y'z'+x'z'=c'\\
+x'y'z'=-d'
+\end{cases}.
+$$
+现在,我们考虑从 $\mathbf{R}^2$ 到 $\mathbf{R}^2$ 的可逆线性映射 $T$,该
+可逆线性映射要把三角形 $X'Y'Z'$ 变成顶点在单位圆上的三角形
+$X''Y''Z''$,其中点 $X'$ 被 $T$ 映射成 $X''$,$Y'$ 被 $T$ 映射成 $Y''$,$Z'$
+被 $T$ 映射成 $Z''$.且 $X''=(1,0)$,$Y''=(\cos \frac{2\pi}{3},\sin
+\frac{2\pi}{3})$,$Z''=(\cos \frac{4\pi}{3},\sin \frac{4\pi}{3})$.然而
+事实上这是不可能的,因为\textbf{$\mathbf{R}^2$ 到 $\mathbf{R}^2$ 的可逆
+  线性映射不可能把平面上的非正三角形变成正三角形.}因此这种思路行不通.我
+们换一种思路.
+\end{document}
+
+
+
+
+
+
+
+

@@ -1,0 +1,222 @@
+\documentclass[twoside,11pt]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}\usepackage{pstricks-add}
+\newtheorem{lemma}{定理}
+\newtheorem{corollary}{推论}
+\newtheorem{remarklemma}{注}[lemma]
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+% \usepackage{latexdef}
+\def\ZZ{\mathbb{Z}} \topmargin -0.40in \oddsidemargin 0.08in
+\evensidemargin 0.08in \marginparwidth 0.00in \marginparsep 0.00in
+\textwidth 16cm \textheight 24cm \newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献} \def \qed {\hfill \vrule height6pt
+  width 6pt depth 0pt} \topmargin -0.40in \oddsidemargin 0.08in
+\evensidemargin 0.08in \marginparwidth0.00in \marginparsep 0.00in
+\textwidth 15.5cm \textheight 24cm \pagestyle{myheadings}
+\markboth{\rm \centerline{}} {\rm \centerline{}}
+\begin{document}
+\title{\huge{\bf{复平面上的点形成正$n$ 边形的一个必要条件}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}} \date{}
+\maketitle
+\vspace{30pt} 
+\begin{lemma}
+  设 $z_1,z_2,z_3$ 为复平面上的三个点 $Z_1,Z_2,Z_3$ 所代表的复
+  数,且$Z_1,Z_2,Z_3$ 如果不共线,则按照逆时针方向放置.则这三个点形成正三
+  角形的充要条件是
+  \begin{equation}\label{eq:1}
+    z_1+\omega_{3} z_2+\omega_{3}^2z_3=0,
+  \end{equation}
+  其中 $\omega_{3}=e^{\frac{2\pi}{3}i}$.
+\end{lemma}
+\begin{proof}[\textbf{证明}]
+$$
+z_1+\omega_{3} z_2+\omega_{3}^2z_3=0 \iff z_1+\omega_{3}
+z_2+(-1-\omega_3)z_3=0 \iff z_1-z_3=\omega_3(z_3-z_2).
+$$
+得证.
+\end{proof}
+\begin{lemma}
+  设 $z_1,z_2,z_3,z_{4}$ 为复平面上的四个点 $Z_1,Z_2,Z_3,Z_4$ 所代表的
+  复数,且$Z_1,Z_2,Z_3,Z_{4}$ 如果不共线,则按照逆时针方向放置.若这四个点
+  是正方形的四个顶点,则
+  \begin{equation}\label{eq:1}
+    z_1+\omega_{4} z_2+\omega_{4}^2z_3+\omega_4^3z_{4}=0,
+  \end{equation}
+  其中 $\omega_4=e^{\frac{2\pi i}{4}}$.
+\end{lemma}
+\begin{proof}[\bf{证明}]
+  \begin{align*}
+    z_1+\omega_{4} z_2+\omega_{4}^2z_3+\omega_4^3z_{4}=0 \iff
+    (z_1-z_{3})=i(z_4-z_2).
+  \end{align*}
+  得证.
+\end{proof}
+\begin{remarklemma}
+  注意式 \ref{eq:1} 不是四个点形成正方形顶点的充要条件.因为方程
+  \ref{eq:1} 还可以是如下情形:\\
+
+  \psset{xunit=1.0cm,yunit=1.0cm}
+  \begin{pspicture*}(0.02,-2.52)(15.45,4.36)
+    \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(0.02,-2.52)(15.45,4.36)
+    \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt
+      0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+    \psline(3,1)(9,1) \psline(4,4)(4,-2) \psline(4,4)(3,1)
+    \psline(3,1)(4,-2) \psline(4,-2)(9,1) \psline(9,1)(4,4)
+    \begin{scriptsize}
+      \psdots[dotstyle=*,linecolor=blue](3,1)
+      \rput[bl](3.05,1.07){\blue{$Z_1$}}
+      \psdots[dotstyle=*,linecolor=blue](9,1)
+      \rput[bl](9.04,1.07){\blue{$Z_3$}}
+      \psdots[dotstyle=*,linecolor=blue](4,4)
+      \rput[bl](4.04,4.06){\blue{$Z_4$}}
+      \psdots[dotstyle=*,linecolor=blue](4,-2)
+      \rput[bl](4.04,-1.93){\blue{$Z_2$}}
+    \end{scriptsize}
+  \end{pspicture*}
+\end{remarklemma}
+\begin{lemma}
+  设 $z_1,z_2,z_3,z_4,z_5$ 为复平面上的五个点 $Z_1,Z_2,Z_3,Z_4,Z_5$ 所
+  代表的复数,且 $Z_1,Z_2,Z_3,Z_4,Z_5$ 不共线时,则按照逆时针方向放置.若
+  这五个点形成正五边形的五个顶点,则
+$$
+z_1+\omega_5 z_2+\omega_5^2 z_3+\omega_5^3 z_4+\omega_5^4 z_5=0.
+$$
+其中 $\omega_5=e^{\frac{2\pi i}{5}}$ 是5次单位根.
+\end{lemma}
+\begin{proof}[\bf{证明}]
+  由于五个点形成正五边形的五个顶点,因此我们把形成的正五边形的中心平移到
+  原点.也就是说,令 $z_i'=z_i+p$,其中 $p$ 是一个复数,
+$$
+p=-\frac{z_1+z_2+z_3+z_4+z_5}{5}.
+$$
+易得
+$$
+z_1+\omega_5 z_2+\omega_5^2 z_3+\omega_5^3 z_4+\omega_5^4 z_5=0 \iff
+z_1'+\omega_5 z_2'+\omega_5^2 z_3'+\omega_5^3 z_4'+\omega_5^4 z_5'=0,
+$$
+这是因为 $p+\omega_5 p+\omega_5^2 p+\omega_5^3 p+\omega_5^4
+p=0$.然后,令 $z_i=re^{\theta i}$,其中 $r>0$ 是一个实数.这样,我们就只用
+证明
+$$
+r(e^{\theta i}+\omega_5^2e^{\theta i}+\omega_5^4e^{\theta
+  i}+\omega_5^6e^{\theta i}+\omega_5^8e^{\theta i})=0,
+$$
+也就是证明
+$$
+1+\omega_5^2+\omega_5^4+\omega_5^6+\omega_5^8=0,
+$$
+这是容易的.
+\end{proof}
+\begin{lemma}
+  设 $z_1,\cdots,z_n$ 为复平面上的 $n$ 个点($n\geq 3$)
+  $Z_1,\cdots,Z_n$ 所对应的复数. 且 $Z_1,\cdots,Z_n$ 不共线时,按照逆时
+  针方向放置.若这 $n$ 个点形成正 $n$ 边形的 $n$ 个顶点,则
+$$
+z_1+\omega_nz_2+\omega_n^2z_3+\cdots+\omega_n^{n-1}z_n=0.
+$$
+其中 $\omega_n=e^{\frac{2\pi i}{n}}$.
+\end{lemma}
+\begin{proof}[\textbf{证明}]
+  可以完全仿照 $n=5$ 的情形(引理2.3)来证明,最后划归为要证明的一个等式为
+$$
+1+\omega_n^2+\omega_n^4+\cdots+\omega_n^{2n-2}=0,
+$$
+根据等比数列求和公式,也就是证明,
+$$
+\frac{1-\omega_n^{2n}}{1-\omega_n^2}=0.
+$$
+得证.
+\end{proof}
+\begin{lemma}
+  设 $z_1,z_2,z_3,z_{4}$ 为复平面上的四个点 $Z_1,Z_2,Z_3,Z_4$ 所代表的
+  复数,且$Z_1,Z_2,Z_3,Z_{4}$ 如果不共线,则按照逆时针方向放置.则这四个点
+  是以 $p$ 为中心的正方形的四个顶点当且仅当
+  \begin{eqnarray}
+    \begin{cases}
+z_1+z_2+z_3+z_4=4p,\\
+      z_1+\omega_{4} z_2+\omega_{4}^2z_3+\omega_4^3z_{4}=0,\\
+      z_1+\omega_4^2z_2+\omega_4^4z_3+\omega_4^6z_4=0,\\
+     z_1+\omega_4^3z_2+\omega_4^6z_3+\omega_4^9z_4=2z_1.
+    \end{cases}
+  \end{eqnarray}
+  其中 $\omega_4=e^{\frac{2\pi i}{4}}$.
+\end{lemma}
+\begin{proof}[\textbf{证明}]
+很简单,请自行验证.
+\end{proof}
+\iffalse
+\begin{lemma}
+设 $z_1,z_2,z_3,z_4,z_5$ 为复平面上的五个点 $Z_1,Z_2,Z_3,Z_4,Z_5$ 所
+  代表的复数,且 $Z_1,Z_2,Z_3,Z_4,Z_5$ 不共线时,则按照逆时针方向放置.则
+  这五个点形成以 $p$ 为中心的正五边形的五个顶点,当且仅当
+  \begin{equation}
+    \label{eq:12.08}
+    \begin{cases}
+      z_1+z_2+z_3+z_4+z_5=5p,\\
+z_1+\omega_5z_2+\omega_5^2z_3+\omega_5^3z_4+\omega_5^4z_5=0,\\
+z_1+\omega_5^2z_2+\omega_5^4z_3+\omega_5^6z_4+\omega_5^8z_5=0,\\
+
+    \end{cases}
+  \end{equation}
+其中 $\omega_5=e^{\frac{2\pi i}{5}}$ 是5次单位根.
+\end{lemma}\fi
+
+\iffalse探索了这么多铺垫性的内容,现在我们来探索复平面上的 $n$ 个点 $z_1,z_2,\cdots,z_n$ 形成正 $n$ 边形
+的 $n$ 个顶点的充要条件.$z_1,z_2,\cdots,z_n$ 形成正 $n$ 边形的 $n$ 个
+顶点,当且仅当 $z_1,z_2,\cdots,z_n$ 经过同样的平移后,形成中心在原点的正 $n$
+边形的 $n$ 个顶点,也即存在复数 $p$,使得 $z_1+p,z_2+p,\cdots,z_n+p$ 是
+中心在原点的正 $n$ 边形的 $n$ 个顶点.而中心在原点的正 $n$ 边形的 $n$
+个顶点可以表示为
+$$
+e^{i\theta},e^{i\theta}\omega_n,e^{i\theta}\omega_n^2,\cdots,e^{i\theta}\omega_n^{n-1}.
+$$\fi
+
+% ----------------------------------------------------------------------------------------
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

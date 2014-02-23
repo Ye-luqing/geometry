@@ -1,0 +1,124 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{amsthm} 
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L} 
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\begin{document}
+\title{{\huge{\bf{离散Fourier变换将正 $n$ 边形的 $n$ 个顶点变成三角形
+        的三个顶点}}}}\author{叶卢庆
+  \footnote{1992--,杭州师范大学在读本科生,Email:h5411167@gmail.com}}
+\maketitle
+我们来看复平面上的 $n(n\geq 3)$ 个点 $Z_0,\cdots,Z_{n-1}$,它们对应的复
+数分别为$z_0,\cdots,z_{n-1}$.点 $Z_0,\cdots,Z_{n-1}$ 按照逆时针方向排
+列,且$Z_0,\cdots,Z_{n-1}$ 是一个正 $n$ 边形的 $n$ 个顶
+点.设点 $P$ 是 $n$ 边形 $Z_0\cdots Z_{n-1}$ 的中心,其对应的复数
+为 $p$.易得 $$p=\frac{z_0+z_1+\cdots+z_n}{n}.$$将正$n$ 边形平
+移,使得 $\forall 0\leq k\leq n-1$, $Z_k$ 平移到 $Z_k'$,其中$Z_k'$ 对应
+的复数为 $z_k'=z_k-p$.易得存在复
+数 $re^{i\theta}$,使得$z_k'=re^{i\theta}\omega_n^k$,其中
+$\omega_n=e^{\frac{2\pi i}{n}}$ 是$n$ 次单位根,$r>0$.且向量
+\begin{equation}
+  \label{eq:1}\begin{pmatrix}
+    u_0\\
+    u_1\\
+    \vdots\\
+    u_{n-1}\\
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \omega_n^0 &\omega_n^0&\cdots&\omega_n^0\\
+    \omega_n^0&\omega_n^1&\cdots&\omega_n^{n-1}\\
+    \vdots&\vdots&\vdots&\vdots\\
+    \omega_n^0&\omega_n^{n-1}&\cdots&\omega_n^{(n-1)(n-1)}\\
+  \end{pmatrix}\begin{pmatrix}
+    z_0\\
+    z_1\\
+    \vdots\\
+    z_{n-1}
+  \end{pmatrix}.
+\end{equation}
+对于不理解线性代数的读者来说,可以把表达式 \eqref{eq:1} 理解成如下,
+$$
+\begin{cases}
+  u_0=\omega_n^0z_0+\omega_n^0z_1+\cdots+\omega_n^0z_{n-1},\\
+  u_1=\omega_n^0z_0+\omega_n^1z_1+\cdots+\omega_n^{n-1}z_{n-1},\\
+  \vdots\\
+  u_{n-1}=\omega_n^0z_0+\omega_n^{n-1}z_1+\cdots+\omega_n^{(n-1)(n-1)}z_{n-1}.
+\end{cases}
+$$
+这是一个离散Fourier变换.如上叙述的内容作为本文中所有定理的条件.易得
+$$
+u_0=z_0+z_1+\cdots+z_{n-1}=np.
+$$
+下面我们来证明
+\begin{theorem}
+  当 $1\leq j<n-1$ 时,
+$$
+u_j=\omega_n^0z_0+\omega_n^jz_1+\cdots+\omega_n^{j(n-1)}z_{n-1}=0,
+$$
+当 $j=n-1$ 时,
+$$
+u_j=\omega_n^0z_0+\omega_n^jz_1+\cdots+\omega_n^{j(n-1)}z_{n-1}=nre^{i\theta}.
+$$
+\end{theorem}
+\begin{proof}[\textbf{证明}]
+  由于当 $1\leq j\leq n$ 时,根据等比数列求和公式,
+$$
+\omega_n^0p+\omega_n^jp+\cdots+\omega_n^{j(n-1)}p=0,
+$$
+因此
+\begin{align*}
+  u_j&=\omega_n^0z_0+\omega_n^jz_1+\cdots+\omega_n^{j(n-1)}z_{n-1}\\&=\omega_{n}^{0}z_{0}'+\omega_{n}^{j}z_{1}'+\cdots+\omega_{n}^{j(n-1)}z_{n-1}'\\&=re^{i\theta}(\omega_{n}^0+\omega_{n}^{j+1}+\cdots+\omega_{n}^{(j+1)(n-1)}).
+\end{align*}
+当 $\omega_n^{j+1}=1$ ,也就
+是 $j=n-1$ 时,可得$u_j=nre^{i\theta}.$否则,根据等比数列求和公式,易
+得
+$re^{i\theta}(\omega_n^0+\omega_{n}^{j+1}+\cdots+\omega_n^{(j+1)(n-1)})=0$.
+\end{proof}
+\bigskip
+\noindent由上面的定理可见,
+$$
+\begin{pmatrix}
+  u_0\\
+  u_1\\
+u_2\\
+  \vdots\\
+  u_{n-1}
+\end{pmatrix}=\begin{pmatrix}
+  np\\
+  0\\
+  \vdots\\
+  0\\
+  nre^{i\theta}
+\end{pmatrix}.
+$$
+于是,离散Fourier变换把一个正 $n$ 边形$(n\geq
+3)$ 的顶点变成一个三角形的顶点,三角形的三个顶点对应的复数分别为
+$0,np,nre^{i\theta}$,当然当这三个顶点有重合时,那个三角形
+是退化的三角形.\\
+
+\noindent特别的,当 $n=3$ 时,离散 Fourier 变换将正三角形的三个顶点变为
+三角形的三个顶点.易得
+\end{document}
+
+
+
+
+
+
+
+

@@ -1,0 +1,167 @@
+\documentclass[twoside,11pt]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{esvect}\usepackage{pstricks-add}
+\usepackage{amsthm} 
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xcolor,color}
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{thm}{定理}
+\newtheorem*{remark}{\textcolor{red}{审稿人意见}}
+\newtheorem*{remarkall}{\textcolor{red}{审稿人总意见}}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+% \usepackage{latexdef}
+\def\ZZ{\mathbb{Z}} \topmargin -0.40in \oddsidemargin 0.08in
+\evensidemargin 0.08in \marginparwidth 0.00in \marginparsep 0.00in
+\textwidth 16cm \textheight 24cm \newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献} \def \qed {\hfill \vrule height6pt
+  width 6pt depth 0pt} \topmargin -0.40in \oddsidemargin 0.08in
+\evensidemargin 0.08in \marginparwidth0.00in \marginparsep 0.00in
+\textwidth 15.5cm \textheight 24cm \pagestyle{myheadings}
+\markboth{\rm \centerline{}} {\rm \centerline{}}
+\begin{document}
+\title{\huge{\bf{《已知相邻三边长及其夹角的四边形》审稿意见}}} \author{\small{作者:何
+    万程~~审稿人:叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}}
+\maketitle
+\begin{thm}
+边不自交的四边形$ABCD$中,$AB = a$,$BC = b$,$CD = c$,$\angle ABC = \alpha$,$\angle BCD = \beta$,则
+$$
+AD^2 = a^2 + b^2 + c^2 - 2ab\cos\alpha - 2bc\cos\beta + 2ca\cos\left(\alpha + \beta\right) .
+$$
+\end{thm}
+\textcolor{red}{
+\begin{remark}
+ 如图,凹四边形 $ABCD$.此时,$\angle ABC$ 到底指的是图中的角 $\theta$ 呢
+ 还是图中的角 $\phi$ 呢?如果指的是 $\theta$,则定理的结论不正确,要改成
+$$AD^2 = a^2 + b^2 + c^2 - 2ab\cos\alpha - 2bc\cos\beta +
+2ca\cos\left(\alpha -\beta\right).$$
+如果指的是 $\phi$,则定理的结论正确.作者的本意应该是指内角 $\phi$,希望
+作者能指明.另外,希望作者能指明:点 $A,B,C,D$ 是顺次相连的.\\
+\newrgbcolor{qqwuqq}{0 0.39 0}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-4.3,-5.88)(23.02,6.3)
+\psline(2.86,-1.62)(6.96,0.72)
+\psline(6.9,5.24)(6.96,0.72)
+\psline(6.9,5.24)(10.52,-1.5)
+\psline(2.86,-1.62)(10.52,-1.5)
+\pscustom[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{\parametricplot{1.5840698834790712}{3.660213281810066}{0.6*cos(t)+6.96|0.6*sin(t)+0.72}\lineto(6.96,0.72)\closepath}
+\pscustom[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{\parametricplot{-2.6229720253695206}{1.5840698834790707}{0.6*cos(t)+6.96|0.6*sin(t)+0.72}\lineto(6.96,0.72)\closepath}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](2.86,-1.62)
+\rput[bl](2.94,-1.5){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.96,0.72)
+\rput[bl](7.04,0.84){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](6.9,5.24)
+\rput[bl](6.98,5.36){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=blue](10.52,-1.5)
+\rput[bl](10.6,-1.38){\blue{$D$}}
+\rput[bl](6.58,0.8){\qqwuqq{$\theta$}}
+\rput[bl](7.2,0.46){\qqwuqq{$\phi$}}
+\end{scriptsize}
+\end{pspicture*}
+也就是说,希望
+定理能重新叙述如下:\\\\
+边不自交的四边形$ABCD$中,$A,B,C,D$ 顺次相连,且$|AB| = a$,$|BC| = b$,$|CD|
+= c$,四边形内角$\angle ABC = \alpha$,内角$\angle BCD = \beta$,则
+$$
+AD^2 = a^2 + b^2 + c^2 - 2ab\cos\alpha - 2bc\cos\beta + 2ca\cos\left(\alpha + \beta\right) .
+$$
+\end{remark}}
+\begin{proof}[\textbf{证明}]
+由$\vv{AD} = \vv{AB} + \vv{BC} + \vv{CD}$得
+$$
+\vv{AD}^2 = \vv{AB}^2 + \vv{BC}^2 + \vv{CD}^2 + 2\vv{AB}\cdot\vv{BC} + 2\vv{BC}\cdot\vv{CD} + 2\vv{CD}\cdot\vv{AB} ,
+$$
+所以
+$$
+AD^2 = a^2 + b^2 + c^2 - 2ab\cos\alpha - 2bc\cos\beta + 2ca\cos\left(\alpha + \beta\right) . \qedhere
+$$
+\end{proof}
+
+\begin{thm}
+边不自交的四边形$ABCD$中,$AB = a$,$BC = b$,$CD = c$,$\angle ABC = \alpha$,$\angle BCD = \beta$,则
+$$
+S_{四边形ABCD} = \frac{1}{2}\left(ab\sin\alpha + bc\sin\beta - ac\sin\left(\alpha + \beta\right)\right) .
+$$
+\end{thm}
+
+\begin{proof}[\textbf{证明}]
+设四边形$ABCD$是凸四边形,$\alpha + \beta > 180^\circ$,延长$AB$、$DC$相
+交于点$E$,设$BE = x$,$DE = y$\textcolor{red}{(应该要改成$CE=y$)},由正弦定理得
+$$
+x = -\frac{\sin\beta}{\sin\left(\alpha + \beta\right)}b , y = -\frac{\sin\alpha}{\sin\left(\alpha + \beta\right)}b ,
+$$
+所以
+\begin{align*}
+S_{四边形ABCD} &= S_{\triangle ADE} - S_{\triangle BCE} \\
+&= \textcolor{red}{-}\frac{1}{2}\left(\left(a + x\right)\left(c +
+    y\right) - xy\right)\sin\left(\alpha + \beta\right)(\textcolor{red}{\mbox{忘了负号})} \\
+&= \frac{1}{2}\left(ab\sin\alpha + bc\sin\beta - ac\sin\left(\alpha +
+    \beta\right)\right)(\textcolor{red}{\mbox{这里跨度较大,希望作者能
+    指出详细运算过程.}}) .
+\end{align*}
+当四边形$ABCD$是凸四边形,$\alpha + \beta = 180^\circ$时容易验证上面的
+公式仍然适用；当四边形$ABCD$是凸四边形,$\alpha + \beta < 180^\circ$时
+或四边形$ABCD$是凹四边形时可类似上面的方法进行证
+明.(\textcolor{red}{\mbox{这段文字不太恰当.})}
+\end{proof}
+
+\begin{thm}
+\label{thm1}
+边不自交的四边形$ABCD$中,$AB = a$,$BC = b$,$CD = c$,则当四边形有外接圆,且$DA$是外接圆直径时四边形的面积最大.
+\end{thm}
+
+\begin{proof}[\textbf{证明}]
+作六边形$ABCDB'C'$,使四边形$ABCD$与四边形$DB'C'A$全等,$DB' = AB$,$B'C' = BC$,$C'A = CD$,则六边形$ABCDB'C'$有固定的周长,且面积是四边形$ABCD$面积的两倍,所以六边形$ABCDB'C'$在有外接圆时面积最大,此时四边形$ABCD$也有外接圆且面积也最大,$DA$是是外接圆直径.
+\end{proof}
+
+下面来求\autoref{thm1}中四边形面积最大时的外接圆半径.设外接圆半径是$R$,此时必定$AD = 2R$,根据四边形$ABCD$的外接圆半径公式,得
+$$
+R^2 = \frac{\left(2aR + bc\right)^2\left(2bR + ac\right)^2\left(2cR + ab\right)^2}{\left(-2R + a + b + c\right)\left(2R - a + b + c\right)\left(2R + a - b + c\right)\left(2R + a + b - c\right)} ,
+$$
+化简得
+$$
+4R^3 - \left(a^2 + b^2 + c^2\right)R - abc = 0 ,
+$$
+这个方程有三个实数根,但只有一个是正根,于是就得
+$$
+R = \frac{1}{3}\sqrt{3\left(a^2 + b^2 + c^2\right)} \cos \left(\frac{1}{3}\arccos \frac{3abc\sqrt{3\left(a^2 + b^2 + c^2\right)}}{\left(a^2 + b^2 + c^2\right)^2}\right) .
+$$
+
+由上面的推导,知凸四边形有一边是其外接圆直径,其余三边分别是$a$、$b$、$c$,则外接圆半径是
+$$
+R = \frac{1}{3}\sqrt{3\left(a^2 + b^2 + c^2\right)} \cos \left(\frac{1}{3}\arccos \frac{3abc\sqrt{3\left(a^2 + b^2 + c^2\right)}}{\left(a^2 + b^2 + c^2\right)^2}\right) .
+$$
+\textcolor{red}{
+\begin{remarkall}
+定理3还未审.希望作者能为每个定理都先配一幅图.建议先退稿让作者完善细节.
+\end{remarkall}}
+\end{document}
+
+
+
+
+
+
+
+

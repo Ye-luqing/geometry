@@ -1,0 +1,200 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb,epigraph}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem{example}{例}
+\setlength{\epigraphwidth}{0.6\textwidth}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{基本对称矩阵与Vandermond矩阵的关系}}}
+\author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数
+      学与应用数学专业本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭
+      州师范大学理学院,浙江~杭州~310036}}}
+\maketitle
+\noindent 我们把行列式
+\begin{equation}
+  \label{eq:1}
+\det  \begin{bmatrix}
+    \frac{\pa \sigma_1}{\pa r_1}&\frac{\pa \sigma_1}{\pa
+      r_2}&\cdots&\frac{\pa\sigma_1}{\pa r_n}\\
+    \frac{\pa \sigma_2}{\pa r_1}&\frac{\pa \sigma_2}{\pa
+      r_2}&\cdots&\frac{\pa\sigma_2}{\pa r_n}\\
+    \vdots&\vdots&\cdots&\vdots\\
+    \frac{\pa \sigma_n}{\pa r_1}&\frac{\pa \sigma_n}{\pa
+      r_2}&\cdots&\frac{\pa\sigma_n}{\pa r_n}
+  \end{bmatrix}=\prod_{1\leq i<j\leq n} (r_i-r_j)
+\end{equation}
+叫基本对称行列式,其中 $\sigma_1,\cdots,\sigma_n$ 为关
+于$r_1,\cdots,r_n$ 的 $n$ 个基本对称多项式,也即,$$
+  \begin{cases}
+    \sigma_1=r_1+r_2+\cdots+r_n,\\
+\sigma_2=r_1r_2+r_1r_3+\cdots+r_{n-1}r_n,\\
+\sigma_3=r_1r_2r_3+r_1r_2r_4+\cdots+r_{n-2}r_{n-1}r_n,\\
+\vdots\\
+\sigma_n=r_1r_2\cdots r_n.
+  \end{cases}
+$$
+即,对于两两不等的 $p_1,\cdots,p_i$,
+$$
+\sigma_i=\sum_{1\leq p_1<p_2<\cdots<p_i\leq n}r_{p_1}r_{p_2}\cdots r_{p_i}.
+$$
+我们发现,基本对称行列式和Vandermond 行列式
+\begin{equation}
+  \label{eq:2}
+\det\begin{bmatrix}
+r_1^{n-1}&r_2^{n-1}&\cdots&r_n^{n-1}\\
+\vdots&\vdots&\cdots&\vdots\\
+r_1&r_2&\cdots&r_n\\
+  1&1&\cdots&1\\
+\end{bmatrix}=\prod_{1\leq i<j\leq n} (r_i-r_j)
+\end{equation}
+的值相等.因此我们来寻找矩阵
+\begin{equation}
+  \label{eq:3}
+   \begin{bmatrix}
+    \frac{\pa \sigma_1}{\pa r_1}&\frac{\pa \sigma_1}{\pa
+      r_2}&\cdots&\frac{\pa\sigma_1}{\pa r_n}\\
+    \frac{\pa \sigma_2}{\pa r_1}&\frac{\pa \sigma_2}{\pa
+      r_2}&\cdots&\frac{\pa\sigma_2}{\pa r_n}\\
+    \vdots&\vdots&\cdots&\vdots\\
+    \frac{\pa \sigma_n}{\pa r_1}&\frac{\pa \sigma_n}{\pa
+      r_2}&\cdots&\frac{\pa\sigma_n}{\pa r_n}
+  \end{bmatrix}
+\end{equation}
+和矩阵
+\begin{equation}
+  \label{eq:4}
+  \begin{bmatrix}
+r_1^{n-1}&r_2^{n-1}&\cdots&r_n^{n-1}\\
+\vdots&\vdots&\cdots&\vdots\\
+r_1&r_2&\cdots&r_n\\
+  1&1&\cdots&1\\
+\end{bmatrix}
+\end{equation}
+的关系.我们先来考察简单的情形,当 $n=2$ 时,我们尝试发现
+\begin{equation}
+  \label{eq:5}
+  \begin{bmatrix}
+    1&1\\
+r_2&r_1\\
+  \end{bmatrix}
+\end{equation}
+和
+\begin{equation}
+  \label{eq:6}
+\begin{bmatrix}
+r_1&r_2\\
+    1&1\\
+\end{bmatrix}
+\end{equation}
+的关系.设
+$$
+\begin{bmatrix}
+  r_{1}&r_{2}\\
+1&1
+\end{bmatrix}=\begin{bmatrix}
+  a_{11}&a_{12}\\
+a_{21}&a_{22}
+\end{bmatrix}\begin{bmatrix}
+  1&1\\
+r_{2}&r_{1}
+\end{bmatrix},
+$$
+则
+$$
+\begin{bmatrix}
+  a_{11}&a_{12}\\
+a_{21}&a_{22}
+\end{bmatrix}=\begin{bmatrix}
+  r_1+r_2&-1\\
+1&0
+\end{bmatrix}.
+$$
+当 $n=3$ 时,我们尝试发现
+\begin{equation}
+  \label{eq:11.01}
+  \begin{bmatrix}
+      1&1&1\\
+r_2+r_3&r_1+r_3&r_1+r_2\\
+r_2r_3&r_1r_3&r_1r_2
+  \end{bmatrix}
+\end{equation}
+和
+\begin{equation}
+  \label{eq:11.02}
+  \begin{bmatrix}
+      r_1^2&r_2^2&r_3^2\\
+r_1&r_2&r_3\\
+1&1&1
+  \end{bmatrix}
+\end{equation}
+的关系.设
+\begin{equation}
+  \label{eq:11.06}
+  \begin{bmatrix}
+      r_1^2&r_2^2&r_3^2\\
+r_1&r_2&r_3\\
+1&1&1
+  \end{bmatrix}=\begin{bmatrix}
+    a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}\\
+a_{31}&a_{32}&a_{33}
+  \end{bmatrix}\begin{bmatrix}
+          1&1&1\\
+r_2+r_3&r_1+r_3&r_1+r_2\\
+r_2r_3&r_1r_3&r_1r_2
+  \end{bmatrix},
+\end{equation}
+则
+$$
+\begin{bmatrix}
+  a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}\\
+a_{31}&a_{32}&a_{33}
+\end{bmatrix}=\begin{bmatrix}
+ r_1^2+r_2^2+r_3^2+r_1r_2+r_2r_3+r_3r_1&-(r_1+r_2+r_3)&1\\
+r_1+r_2+r_3&-1&0\\
+1&0&0
+\end{bmatrix}.
+$$
+
+\end{document}
+
+
+
+
+
+
+
+
