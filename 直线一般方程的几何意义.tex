@@ -1,0 +1,78 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{直线一般方程的几何意义}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:yeluqingmathematics@gmail.com}}\\{\small{杭州师范大学理学院
+      数学112}}}
+\maketitle
+我们知道,平面直角坐标系中直线的一般方程为
+\begin{equation}
+  \label{eq:1}
+  ax+by+c=0.
+\end{equation}
+其中 $a,b,c\in \mathbf{R}$.\eqref{eq:1} 可以写为三维空间
+$\mathbf{R}^3$ 中两个向量的点积. 
+$$
+\begin{pmatrix}
+  a&b&c
+\end{pmatrix}\begin{pmatrix}
+  x\\
+y\\
+1
+\end{pmatrix}=0.
+$$
+不妨将 $\mathbf{R}^3$ 中的向量 $\begin{pmatrix}
+  a&b&c
+\end{pmatrix}$ 和向量 $\begin{pmatrix}
+  x&y&1
+\end{pmatrix}$ 的起始点都固定在原点 $(0,0,0)$.则向量 $\begin{pmatrix}
+  a&b&c
+\end{pmatrix}$ 的终点在 $(a,b,c)$,向量 $\begin{pmatrix}
+  x&y&1
+\end{pmatrix}$ 的终点在 $(x,y,1)$.经过原点,且与向量 $\begin{pmatrix}
+  a&b&c
+\end{pmatrix}$ 垂直的平面 $A$,与平面 $z=1$ 的交线就是方程 \eqref{eq:1}.
+\end{document}
+
+
+
+
+
+
+
+

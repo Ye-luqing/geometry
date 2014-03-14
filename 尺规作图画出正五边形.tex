@@ -1,0 +1,485 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{尺规作图画出正五边形}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+下面我们来尺规作出正五边形.如图,\\
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\psset{xunit=5.0cm,yunit=5.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2,-1.17)(2.62,1.03)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](0.42,0.92)(-0.75,0.74)(-0.84,-0.55)(0.36,-0.94)(1,0)
+\psline[linecolor=zzttqq](0.42,0.92)(-0.75,0.74)
+\psline[linecolor=zzttqq](-0.75,0.74)(-0.84,-0.55)
+\psline[linecolor=zzttqq](-0.84,-0.55)(0.36,-0.94)
+\psline[linecolor=zzttqq](0.36,-0.94)(1,0)
+\psline[linecolor=zzttqq](1,0)(0.42,0.92)
+\psplot{-2.3}{2.62}{(-0-0*x)/1}
+\psline(0,-1.17)(0,1.03)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](1,0)
+\rput[bl](1.01,0.02){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](0.42,0.92)
+\rput[bl](0.43,0.95){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=blue](-0.75,0.74)
+\rput[bl](-0.73,0.76){\blue{$D$}}
+\psdots[dotstyle=*,linecolor=blue](-0.84,-0.55)
+\rput[bl](-0.82,-0.53){\blue{$E$}}
+\psdots[dotstyle=*,linecolor=blue](0.36,-0.94)
+\rput[bl](0.38,-0.92){\blue{$F$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.01,0.02){\darkgray{$A$}}
+\end{scriptsize}
+\end{pspicture*}
+
+设 $A$ 位于原点,$B$ 的坐标为 $(1,0)$,我们的关键是用尺规画出点 $C$.点
+$C$ 对应的坐标为 $(\cos \frac{2\pi}{5},\sin \frac{2\pi}{5})$.
+$$
+\cos \frac{2\pi}{5}=\frac{\sqrt{5}-1}{4},\sin \frac{2\pi}{5}=\sqrt{\frac{5}{8}+\frac{\sqrt{5}}{8}}.
+$$
+我们先尺规作出长度 $\cos \frac{2\pi}{5}$.先作出长度 $\sqrt{5}$.如
+图,$JB$的长度为 $\sqrt{5}$.
+\\
+
+\psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-12.26,-11.67)(35.98,12.07)
+\pscircle(3.94,0.32){1.34}
+\psline(3.94,0.32)(6.62,0.36)
+\pscircle(6.62,0.36){1.34}
+\psplot{-17.26}{35.98}{(--0.7--0.04*x)/2.68}
+\pscircle(9.3,0.4){1.34}
+\pscircle(11.98,0.44){1.34}
+\pscircle(14.66,0.48){1.34}
+\pscircle(17.34,0.52){1.34}
+\pscircle(11.98,0.44){4.02}
+\pscircle(3.94,0.32){2.68}
+\pscircle(9.3,0.4){2.68}
+\psplot{-17.26}{35.98}{(--61.51-9.28*x)/0.14}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](4.1,0.57){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.79,0.61){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.3,0.4)
+\rput[bl](9.44,0.65){\darkgray{$C$}}
+\psdots[dotstyle=*,linecolor=darkgray](11.98,0.44)
+\rput[bl](12.13,0.69){\darkgray{$D$}}
+\psdots[dotstyle=*,linecolor=darkgray](14.66,0.48)
+\rput[bl](14.82,0.73){\darkgray{$E$}}
+\psdots[dotstyle=*,linecolor=darkgray](17.34,0.52)
+\rput[bl](17.51,0.77){\darkgray{$F$}}
+\psdots[dotstyle=*,linecolor=darkgray](20.02,0.56)
+\rput[bl](20.19,0.8){\darkgray{$G$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.55,5)
+\rput[bl](6.71,5.25){\darkgray{$H$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.69,-4.28)
+\rput[bl](6.83,-4.07){\darkgray{$I$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.53,6.35)
+\rput[bl](6.67,6.57){\darkgray{$J$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.71,-5.63)
+\rput[bl](6.87,-5.39){\darkgray{$K$}}
+\end{scriptsize}
+\end{pspicture*}
+
+然后把线段 $JB$ 放倒在直线 $AG$ 上,得到 $|BM|=\sqrt{5}$.如图.然后可得 $|CM|=\sqrt{5}-1$.\\
+\psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-12.26,-11.67)(35.98,12.07)
+\pscircle(3.94,0.32){1.34}
+\psline(3.94,0.32)(6.62,0.36)
+\pscircle(6.62,0.36){1.34}
+\psplot{-17.26}{35.98}{(--0.7--0.04*x)/2.68}
+\pscircle(9.3,0.4){1.34}
+\pscircle(11.98,0.44){1.34}
+\pscircle(14.66,0.48){1.34}
+\pscircle(17.34,0.52){1.34}
+\pscircle(11.98,0.44){4.02}
+\pscircle(3.94,0.32){2.68}
+\pscircle(9.3,0.4){2.68}
+\psplot{-17.26}{35.98}{(--61.51-9.28*x)/0.14}
+\pscircle(6.62,0.36){3}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](4.1,0.57){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.79,0.61){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.3,0.4)
+\rput[bl](9.44,0.65){\darkgray{$C$}}
+\psdots[dotstyle=*,linecolor=darkgray](11.98,0.44)
+\rput[bl](12.13,0.69){\darkgray{$D$}}
+\psdots[dotstyle=*,linecolor=darkgray](14.66,0.48)
+\rput[bl](14.82,0.73){\darkgray{$E$}}
+\psdots[dotstyle=*,linecolor=darkgray](17.34,0.52)
+\rput[bl](17.51,0.77){\darkgray{$F$}}
+\psdots[dotstyle=*,linecolor=darkgray](20.02,0.56)
+\rput[bl](20.19,0.8){\darkgray{$G$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.55,5)
+\rput[bl](6.71,5.25){\darkgray{$H$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.69,-4.28)
+\rput[bl](6.83,-4.07){\darkgray{$I$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.53,6.35)
+\rput[bl](6.67,6.57){\darkgray{$J$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.71,-5.63)
+\rput[bl](6.87,-5.39){\darkgray{$K$}}
+\psdots[dotstyle=*,linecolor=darkgray](12.61,0.45)
+\rput[bl](12.75,0.69){\darkgray{$M$}}
+\end{scriptsize}
+\end{pspicture*}
+
+去掉那些凌乱的辅助线,得到如下图.然后我们考虑将 $CM$ 四等分.\\
+
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(0.5,-2.96)(14.93,3.47)
+\psline(3.94,0.32)(6.62,0.36)
+\psplot{0.5}{14.93}{(--0.7--0.04*x)/2.68}
+\psplot{0.5}{14.93}{(--61.51-9.28*x)/0.14}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](3.98,0.39){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.66,0.42){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.3,0.4)
+\rput[bl](9.34,0.46){\darkgray{$C$}}
+\psdots[dotstyle=*,linecolor=darkgray](12.61,0.45)
+\rput[bl](12.66,0.51){\darkgray{$M$}}
+\end{scriptsize}
+\end{pspicture*}
+
+$CM$ 四等分如下:如图,$|CR|=\frac{1}{4}|CM|$.于是
+$|CR|=\frac{\sqrt{5}-1}{4}=\cos \frac{2\pi}{5}$.\\
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(0.81,-4.5)(21.45,4.7)
+\psline(3.94,0.32)(6.62,0.36)
+\psplot{0.81}{21.45}{(--0.7--0.04*x)/2.68}
+\psplot{0.81}{21.45}{(--61.51-9.28*x)/0.14}
+\pscircle(9.3,0.4){3.31}
+\pscircle(12.61,0.45){3.31}
+\psplot{0.81}{21.45}{(--62.9-5.74*x)/0.09}
+\pscircle(9.3,0.4){1.66}
+\pscircle(10.96,0.42){1.66}
+\psplot{0.81}{21.45}{(--29.07-2.87*x)/0.04}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](4,0.41){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.67,0.45){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.3,0.4)
+\rput[bl](9.36,0.48){\darkgray{$C$}}
+\psdots[dotstyle=*,linecolor=darkgray](12.61,0.45)
+\rput[bl](12.67,0.54){\darkgray{$M$}}
+\psdots[dotstyle=*,linecolor=darkgray](10.91,3.29)
+\rput[bl](10.98,3.39){\darkgray{$L$}}
+\psdots[dotstyle=*,linecolor=darkgray](11,-2.44)
+\rput[bl](11.05,-2.36){\darkgray{$N$}}
+\psdots[dotstyle=*,linecolor=darkgray](10.96,0.42)
+\rput[bl](11.01,0.51){\darkgray{$O$}}
+\psdots[dotstyle=*,linecolor=darkgray](10.11,1.85)
+\rput[bl](10.16,1.94){\darkgray{$P$}}
+\psdots[dotstyle=*,linecolor=darkgray](10.15,-1.02)
+\rput[bl](10.21,-0.94){\darkgray{$Q$}}
+\psdots[dotstyle=*,linecolor=darkgray](10.13,0.41)
+\rput[bl](10.19,0.5){\darkgray{$R$}}
+\end{scriptsize}
+\end{pspicture*}
+
+去掉那些凌乱的辅助线,我们只看 $CR$.我们考虑以 $A$ 为圆心以 $|CR|$ 为半
+径作圆.这是圆规的功能.然后我们经过千辛万苦,终于得到了点 $S$.\\
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(2.11,-2.03)(11.28,2.06)
+\psline(3.94,0.32)(6.62,0.36)
+\psplot{2.11}{11.28}{(--0.7--0.04*x)/2.68}
+\psplot{2.11}{11.28}{(--61.51-9.28*x)/0.14}
+\pscircle(9.3,0.4){0.83}
+\pscircle(3.94,0.32){0.83}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](3.97,0.36){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.65,0.4){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.3,0.4)
+\rput[bl](9.33,0.44){\darkgray{$C$}}
+\psdots[dotstyle=*,linecolor=darkgray](10.13,0.41)
+\rput[bl](10.16,0.45){\darkgray{$R$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.77,0.33)
+\rput[bl](4.79,0.37){\darkgray{$S$}}
+\end{scriptsize}
+\end{pspicture*}
+
+接下来我们要考虑的是作出长度 $\sin
+\frac{2\pi}{5}=\sqrt{\frac{5}{8}+\frac{\sqrt{5}}{8}}$.我们先作出长度
+$\frac{5}{8}$.如图,$|AD_1|=\frac{1}{8}$.\\
+\psset{xunit=2.0cm,yunit=2.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(0,-2.96)(12.51,3.55)
+\psline(3.94,0.32)(6.62,0.36)
+\psplot{-2.09}{12.51}{(--0.7--0.04*x)/2.68}
+\pscircle(3.94,0.32){5.36}
+\pscircle(6.62,0.36){5.36}
+\psplot{-2.09}{12.51}{(--24.53-4.64*x)/0.07}
+\pscircle(3.94,0.32){2.68}
+\pscircle(5.28,0.34){2.68}
+\psplot{-2.09}{12.51}{(--10.71-2.32*x)/0.03}
+\pscircle(3.94,0.32){1.34}
+\pscircle(4.61,0.33){1.34}
+\psplot{-2.09}{12.51}{(--4.97-1.16*x)/0.02}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](3.99,0.38){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.66,0.42){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.77,0.33)
+\rput[bl](4.81,0.39){\darkgray{$S$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.25,2.66)
+\rput[bl](5.29,2.72){\darkgray{$T$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.31,-1.98)
+\rput[bl](5.36,-1.92){\darkgray{$U$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.28,0.34)
+\rput[bl](5.32,0.4){\darkgray{$V$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.59,1.49)
+\rput[bl](4.64,1.56){\darkgray{$W$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.63,-0.83)
+\rput[bl](4.67,-0.76){\darkgray{$Z$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.61,0.33)
+\rput[bl](4.65,0.39){\darkgray{$A_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.27,0.91)
+\rput[bl](4.31,0.97){\darkgray{$B_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.28,-0.26)
+\rput[bl](4.33,-0.2){\darkgray{$C_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.28,0.33)
+\rput[bl](4.32,0.39){\darkgray{$D_1$}}
+\end{scriptsize}
+\end{pspicture*}
+
+再看下图,如图所示,$AH_1$ 的长度为 $\frac{5}{8}$.\\
+\psset{xunit=8.0cm,yunit=8.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(3.83,-0.39)(6.77,0.92)
+\psline(3.94,0.32)(6.62,0.36)
+\psplot{3.83}{6.77}{(--0.7--0.04*x)/2.68}
+\pscircle(4.28,0.33){2.68}
+\pscircle(4.61,0.33){2.68}
+\pscircle(4.94,0.33){2.68}
+\pscircle(5.28,0.34){2.68}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](3.95,0.33){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.63,0.37){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.77,0.33)
+\rput[bl](4.78,0.35){\darkgray{$S$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.28,0.33)
+\rput[bl](4.28,0.34){\darkgray{$D_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.61,0.33)
+\rput[bl](4.62,0.34){\darkgray{$E_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.94,0.33)
+\rput[bl](4.95,0.35){\darkgray{$F_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.28,0.34)
+\rput[bl](5.29,0.35){\darkgray{$G_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.61,0.34)
+\rput[bl](5.62,0.36){\darkgray{$H_1$}}
+\end{scriptsize}
+\end{pspicture*}
+
+我们记得,$BM$ 的长度为 $\sqrt{5}$,现在将其八等分,如图,$|BQ_1|=\frac{1}{8}|BM|=\frac{1}{8}\sqrt{5}$.\\
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.28,-5.89)(24.63,6.56)
+\psline(3.94,0.32)(6.62,0.36)
+\psplot{-3.28}{24.63}{(--0.7--0.04*x)/2.68}
+\pscircle(6.62,0.36){5.99}
+\pscircle(12.61,0.45){5.99}
+\psplot{-3.28}{24.63}{(--99.88-10.38*x)/0.15}
+\pscircle(6.62,0.36){3}
+\pscircle(9.62,0.4){3}
+\psplot{-3.28}{24.63}{(--42.16-5.19*x)/0.08}
+\pscircle(6.62,0.36){1.5}
+\pscircle(8.12,0.38){1.5}
+\psplot{-3.28}{24.63}{(--19.14-2.59*x)/0.04}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](4.02,0.45){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.69,0.49){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](12.61,0.45)
+\rput[bl](12.7,0.57){\darkgray{$M$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.61,0.34)
+\rput[bl](5.69,0.47){\darkgray{$H_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.54,5.59)
+\rput[bl](9.62,5.72){\darkgray{$I_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.69,-4.79)
+\rput[bl](9.78,-4.66){\darkgray{$J_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.62,0.4)
+\rput[bl](9.7,0.53){\darkgray{$K_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](8.08,2.98)
+\rput[bl](8.16,3.1){\darkgray{$L_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](8.16,-2.21)
+\rput[bl](8.25,-2.09){\darkgray{$M_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](8.12,0.38)
+\rput[bl](8.21,0.51){\darkgray{$N_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](7.35,1.67)
+\rput[bl](7.43,1.8){\darkgray{$O_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](7.39,-0.93)
+\rput[bl](7.47,-0.8){\darkgray{$P_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](7.37,0.37)
+\rput[bl](7.45,0.49){\darkgray{$Q_1$}}
+\end{scriptsize}
+\end{pspicture*}
+
+如图,然后我们利用圆规把 $AH$ 和 $BQ_1$ 拼接起来.得到 $|AR_1|=\frac{5}{8}+\frac{\sqrt{5}}{8}$.\\
+\psset{xunit=3.0cm,yunit=3.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(2.58,-2)(13.33,2.79)
+\psline(3.94,0.32)(6.62,0.36)
+\psplot{2.58}{13.33}{(--0.7--0.04*x)/2.68}
+\pscircle(5.61,0.34){2.24}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](3.97,0.37){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.65,0.41){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](12.61,0.45)
+\rput[bl](12.64,0.49){\darkgray{$M$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.61,0.34)
+\rput[bl](5.65,0.39){\darkgray{$H_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](7.37,0.37)
+\rput[bl](7.4,0.42){\darkgray{$Q_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.36,0.36)
+\rput[bl](6.39,0.41){\darkgray{$R_1$}}
+\end{scriptsize}
+\end{pspicture*}
+
+然后我们再做出 $\sqrt{|AR_1|}$,如图,$R_{1}L_2$ 的长度为 $\sqrt{|AR_1|}$.\\
+\psset{xunit=2.0cm,yunit=2.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(2.24,-0.42)(10.72,3.19)
+\psplot{2.24}{10.72}{(--0.7--0.04*x)/2.68}
+\pscircle(6.36,0.36){5.36}
+\pscircle(6.49,0.36){5.1}
+\pscircle(3.68,0.32){10.72}
+\pscircle(9.04,0.4){10.72}
+\psplot{2.24}{10.72}{(--59.07-9.28*x)/0.14}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](3.96,0.36){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.65,0.4){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.36,0.36)
+\rput[bl](6.38,0.39){\darkgray{$R_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.04,0.4)
+\rput[bl](9.07,0.43){\darkgray{$E_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.49,0.36)
+\rput[bl](6.52,0.4){\darkgray{$H_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](3.68,0.32)
+\rput[bl](3.7,0.35){\darkgray{$I_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.29,5)
+\rput[bl](6.48,3.08){\darkgray{$J_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.43,-4.29)
+\rput[bl](6.45,-0.35){\darkgray{$K_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.32,2.9)
+\rput[bl](6.35,2.94){\darkgray{$L_2$}}
+\end{scriptsize}
+\end{pspicture*}
+
+然后如图,构造出点 $S_2$.\\
+\psset{xunit=2.0cm,yunit=2.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(2,-1.66)(15.59,6.38)
+\psplot{-3.31}{15.59}{(--0.7--0.04*x)/2.68}
+\psplot{-3.31}{15.59}{(--59.07-9.28*x)/0.14}
+\pscircle(4.77,0.33){1.66}
+\pscircle(3.94,0.32){3.31}
+\pscircle(5.6,0.34){3.31}
+\psplot{-3.31}{15.59}{(--13.69-2.87*x)/0.04}
+\pscircle(6.32,2.9){5.09}
+\pscircle(6.36,0.36){10.18}
+\pscircle(6.28,5.45){10.18}
+\psplot{-3.31}{15.59}{(--24.76--0.13*x)/8.82}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](3.99,0.4){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.68,0.45){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.77,0.33)
+\rput[bl](4.82,0.42){\darkgray{$S$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.36,0.36)
+\rput[bl](6.42,0.45){\darkgray{$R_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.43,-4.29)
+\rput[bl](6.07,-1.51){\darkgray{$K_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.32,2.9)
+\rput[bl](6.37,2.98){\darkgray{$L_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.6,0.34)
+\rput[bl](5.65,0.43){\darkgray{$M_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.75,1.77)
+\rput[bl](4.81,1.85){\darkgray{$N_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.79,-1.1)
+\rput[bl](4.85,-1.02){\darkgray{$O_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](6.28,5.45)
+\rput[bl](6.33,5.53){\darkgray{$P_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](1.91,2.84)
+\rput[bl](1.97,2.91){\darkgray{$Q_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](10.73,2.97)
+\rput[bl](10.78,3.05){\darkgray{$R_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.73,2.88)
+\rput[bl](4.78,2.95){\darkgray{$S_2$}}
+\end{scriptsize}
+\end{pspicture*}
+
+然后,如图,我们得到了正五边形.\\
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-5.04,-5.79)(19.17,6.21)
+\pscircle(3.94,0.32){2.68}
+\pscircle(4.73,2.88){3.15}
+\pscircle(1.75,1.86){3.15}
+\pscircle(1.79,-1.28){3.15}
+\pscircle(4.8,-2.22){3.15}
+\psline(1.75,1.86)(4.73,2.88)
+\psline(4.73,2.88)(6.62,0.36)
+\psline(6.62,0.36)(4.8,-2.22)
+\psline(4.8,-2.22)(1.79,-1.28)
+\psline(1.79,-1.28)(1.75,1.86)
+\pscircle(6.62,0.36){3.15}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.94,0.32)
+\rput[bl](4.03,0.44){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](6.62,0.36)
+\rput[bl](6.7,0.48){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.73,2.88)
+\rput[bl](4.81,3){\darkgray{$S_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](1.75,1.86)
+\rput[bl](1.83,1.99){\darkgray{$T_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](1.79,-1.28)
+\rput[bl](1.88,-1.16){\darkgray{$U_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.8,-2.22)
+\rput[bl](4.88,-2.09){\darkgray{$V_2$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{document}
