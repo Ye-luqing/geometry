@@ -1,0 +1,119 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\bf{$\sqrt{a^2+b^2}+\sqrt{b^2+c^2}+\sqrt{c^2+a^2}\geq
+      \sqrt{2}(a+b+c)$ 的几何意义}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院
+      数学112}}}
+\maketitle
+我们来看不等式
+$$
+\sqrt{a^2+b^2}+\sqrt{b^2+c^2}+\sqrt{c^2+a^2}\geq \sqrt{2}(a+b+c)
+$$
+的几何意义,其中 $a,b,c$ 为非负实数.构造图形如下.图中凡四边形都是正方形.边
+长已经标记.则 
+$$
+|AB|+|BC|+|CD|=\sqrt{a^2+b^2}+\sqrt{b^2+c^2}+\sqrt{c^2+a^2},
+$$
+$$
+|AD|=\sqrt{2}(a+b+c).
+$$
+由于平面上两点之间线段最短,因此 $|AB|+|BC|+|CD|\geq |AD|$.因此不等式成
+立.\\
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3,-6.12)(18.32,6.06)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](-1,-4)(1,-4)(1,-2)(-1,-2)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](1,-2)(5,-2)(5,2)(1,2)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](5,2)(6,2)(6,3)(5,3)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](6,3)(8,3)(8,5)(6,5)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](-1,-4)(8,-3.98)(7.98,5.02)(-1.02,5)
+\psline[linecolor=zzttqq](-1,-4)(1,-4)
+\psline[linecolor=zzttqq](1,-4)(1,-2)
+\psline[linecolor=zzttqq](1,-2)(-1,-2)
+\psline[linecolor=zzttqq](-1,-2)(-1,-4)
+\psline[linecolor=zzttqq](1,-2)(5,-2)
+\psline[linecolor=zzttqq](5,-2)(5,2)
+\psline[linecolor=zzttqq](5,2)(1,2)
+\psline[linecolor=zzttqq](1,2)(1,-2)
+\psline[linecolor=zzttqq](5,2)(6,2)
+\psline[linecolor=zzttqq](6,2)(6,3)
+\psline[linecolor=zzttqq](6,3)(5,3)
+\psline[linecolor=zzttqq](5,3)(5,2)
+\psline[linecolor=zzttqq](6,3)(8,3)
+\psline[linecolor=zzttqq](8,3)(8,5)
+\psline[linecolor=zzttqq](8,5)(6,5)
+\psline[linecolor=zzttqq](6,5)(6,3)
+\rput[tl](-0.26,-4){$ a $}
+\rput[tl](-1.56,-2.64){$ a $}
+\rput[tl](2.72,-2){$ b $}
+\rput[tl](0.5,0.56){$ b $}
+\rput[tl](5.58,2.06){$ c $}
+\rput[tl](4.78,2.8){$ c $}
+\rput[tl](7.06,3.04){$ a $}
+\rput[tl](5.68,4.38){$ a $}
+\psline(1,-4)(5,-2)
+\psline(5,-2)(6,2)
+\psline(6,2)(8,3)
+\psline[linecolor=zzttqq](-1,-4)(8,-3.98)
+\psline[linecolor=zzttqq](8,-3.98)(7.98,5.02)
+\psline[linecolor=zzttqq](7.98,5.02)(-1.02,5)
+\psline[linecolor=zzttqq](-1.02,5)(-1,-4)
+\psline(8,3)(1,-4)
+\begin{scriptsize}
+\psdots[dotstyle=*](5,-2)
+\rput[bl](5.08,-1.88){$B$}
+\psdots[dotstyle=*](6,2)
+\rput[bl](6.08,2.12){$C$}
+\psdots[dotstyle=*,linecolor=darkgray](8,3)
+\rput[bl](8.08,3.12){\darkgray{$D$}}
+\psdots[dotstyle=*,linecolor=darkgray](1,-4)
+\rput[bl](1.08,-3.88){\darkgray{$A$}}
+\psdots[dotstyle=*,linecolor=darkgray](8,-3.98)
+\rput[bl](8.08,-3.86){\darkgray{$E$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{document}
+
+
+
+
+
+
+
+
