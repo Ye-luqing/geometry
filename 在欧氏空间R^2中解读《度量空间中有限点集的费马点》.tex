@@ -1,0 +1,117 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem{theo}{定理}
+\newtheorem*{hypo}{猜想}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{exercise}{习题}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{hypothethis}
+{\bigskip\begin{mdframed}\begin{hypo}}
+    {\end{hypo}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=FZHei-B01S]{FZFangSong-Z02S}
+
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+
+\begin{document}
+\title{\huge{\bf{在 $\mathbf{R}^2$ 中解读《度量空间中有限点集的费马点》}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992--),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:yeluqingmathematics@gmail.com}}\\{\small{杭州师范大学理学院}}}
+\maketitle
+左铨如和林波在文献\cite{zuo} 中讨论了非正曲率强外凸度量空间中有限点集
+费马点的存在性和唯一性.原文的框架比较广泛,因此写的比较繁,但是我想作者应该是以
+$\mathbf{R}^2$ 作为其论述的直观图景的.因此在这篇笔记里,我们在
+$\mathbf{R}^2$ 中大致复述作者的想法,而且我们只讨论三个点,而非一般的有
+限个点,因为这并不妨碍我们对主要意思的把握.在 $\mathbf{R}^2$ 中我们采用的距离是常见的欧氏距离.
+
+对于平面 $\mathbf{R}^2$ 上的三个点来说,费马点的存在性是容易的,可以看文
+献 \cite{zuo} 中对于定理 1 的证明.对于 $\mathbf{R}^2$ 上的三个点这个
+具体的命题来说,简化的证明也可以见文献 \cite{ye} 中的定理8.我们着重于证
+明,对于平面$\mathbf{R}^2$上不共线的点  $P_1,P_2,P_3$ 来说,费马点是唯一
+的.
+\begin{proof}[\bf{证明}]
+  如图 \eqref{fig:1}.假若 $Q_1,Q_2$ 都是点集 $\{P_1,P_2,P_3\}$ 的费马
+  点,则 $|Q_1P_1|+|Q_1P_2|+|Q_1P_3|=|Q_2P_1|+|Q_2P_2|+|Q_2P_3|=S$.取 $Q_1,Q_2$ 的中点 $P$.由于
+$$
+\begin{cases}
+  2|PP_1|\leq |Q_1P_1|+|Q_2P_1|,\\
+2|PP_2|\leq |Q_1P_2|+|Q_2P_2|,\\
+2|PP_3|\leq |Q_1P_3|+|Q_2P_3|.
+\end{cases}
+$$
+且三个不等式的等号不可能都成立.因此把它们相加得到
+$$
+|PP_1|+|PP_2|+|PP_3|<S.
+$$
+于是 $Q_1,Q_2$ 不可能是费马点,矛盾.这说明假设错误,因此费马点是唯一的.
+  \begin{figure}[h]
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.2,-4.68)(23.12,7.5)
+\psline(7.5,3.94)(3.92,-1.84)
+\psline(3.92,-1.84)(13.64,-2.34)
+\psline(13.64,-2.34)(7.5,3.94)
+\psline(7.5,3.94)(7.69,0.64)
+\psline(7.69,0.64)(3.92,-1.84)
+\psline(7.69,0.64)(13.64,-2.34)
+\psline(7.5,3.94)(9.84,0.8)
+\psline(7.5,3.94)(8.77,0.72)
+\psline(9.84,0.8)(3.92,-1.84)
+\psline(9.84,0.8)(13.64,-2.34)
+\psline(8.77,0.72)(3.92,-1.84)
+\psline(8.77,0.72)(13.64,-2.34)
+\begin{scriptsize}
+\psdots[dotstyle=*](7.5,3.94)
+\rput[bl](7.58,4.06){$P_1$}
+\psdots[dotstyle=*](3.92,-1.84)
+\rput[bl](3.4,-1.84){$P_3$}
+\psdots[dotstyle=*](13.64,-2.34)
+\rput[bl](13.72,-2.22){$P_2$}
+\psdots[dotstyle=*](7.69,0.64)
+\rput[bl](7.78,0.76){$Q_1$}
+\psdots[dotstyle=*](9.84,0.8)
+\rput[bl](9.92,0.92){$Q_2$}
+\psdots[dotstyle=*](8.77,0.72)
+\rput[bl](8.84,0.84){$P$}
+\end{scriptsize}
+\end{pspicture*}
+    \caption{}
+    \label{fig:1}
+  \end{figure}
+
+\end{proof}
+
+
+\begin{thebibliography}{2}
+\bibitem{zuo}左铨如, 林波. 度量空间中有限点集的费马点[J]. 数学杂志,
+  1997, 17(3):359-364.
+\bibitem{ye}Luqing Ye.Finding the Fermat point via analysis,arXiv:http://arxiv.org/abs/1404.5898
+\end{thebibliography}
+
+\end{document}
+
+
+
+
+
+
+
+
