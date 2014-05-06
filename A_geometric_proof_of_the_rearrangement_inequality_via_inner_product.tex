@@ -1,0 +1,63 @@
+\documentclass{amsart}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\parindent = 5 pt
+\parskip = 12 pt
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\include{psfig}
+
+\begin{document}
+
+\title{A geometrical proof of the rearrangement inequality via inner product}
+
+\author{Luqing Ye}
+\address{An undergrad at College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+\email{yeluqingmathematics@gmail.com}
+\maketitle
+For every choice of real numbers $x_1\leq \cdots\leq x_n$ ,$y_1\leq
+\cdots\leq y_n$ and every permutation
+$x_{\sigma_{1}},\cdots,x_{\sigma_n}$ of $x_1,\cdots,x_n$,the rearrangement inequality states that
+\begin{equation*}
+  x_ny_1 + \cdots + x_1y_n
+\le x_{\sigma_{1}}y_1 + \cdots + x_{\sigma_{n}}y_{n},
+\end{equation*}
+the equality holds if and only if
+$\sigma_1=n,\cdots,\sigma_n=1$.And
+\begin{equation*}
+  x_{\sigma_{1}}y_1 + \cdots + x_{\sigma_{n}}y_{n}\leq x_1y_1+\cdots+x_ny_n,
+\end{equation*}
+the equality holds if and only if $\sigma_1=1,\cdots,\sigma_n$.
+
+\setcounter{tocdepth}{2}
+% \tableofcontents
+
+
+
+
+\end{document} 
+
+
+
