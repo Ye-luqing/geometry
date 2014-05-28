@@ -33,17 +33,16 @@
 \begin{document}
 \title{Finding the Fermat Point via analysis}
 \author{Luqing Ye}
-\address{College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+\address{An undergrad at College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
 \email{yeluqingmathematics@gmail.com}
- \thanks{I'd like to thank my class supervisor Doctor Xie Jian for
-   proofreading.If there is still some errors,they remain my own.}
+
 
 \maketitle
 
 %\setcounter{tocdepth}{2}
 % \tableofcontents
  Let $P_1,P_2,P_3$ be three given points in $\mathbf{R}^2$ ,and $P$ be an arbitrary
- point in $\mathbf{R}^2$.The famous Fermat's problem to
+ point in $\mathbf{R}^2$.The classical Fermat's problem to
  Torricelli asks for the location of $P$,such that 
  \begin{equation*}
    |PP_1|+|PP_2|+|PP_3|
@@ -57,26 +56,26 @@ theorem,which are listed below.
 \begin{theorem}[The extreme value theorem]
 Let $f:D\to \mathbf{R}$ be a continuous function,where $D$ is a
 nonempty bounded closed set in $\mathbf{R}^2$.Then $f$ must attain a minimum
-on $D$.That is,there exist point $\xi$ in $D$ such that $f(\xi)\leq
+on $D$.That is,there exists a point $\xi$ in $D$ such that $f(\xi)\leq
 f(x)$ for all $x\in D$.
 \end{theorem}
 \begin{theorem}[Fermat's theorem]
   Let $f:C\to \mathbf{R}$ be a differentiable function,where $C$ is a
-  nonempty open set in $\mathbf{R}^2$.Suppose $x_0\in D$ is a local
-  extreme of $f$,then $f'(x_0)$ is a zero linear map\footnote{A zero
-    linear map maps any vectors into the zero vector.} from
+  nonempty open set in $\mathbf{R}^2$.Suppose $x_0\in C$ is a local
+  extreme point of $f$,then $f'(x_0)$ is a zero linear map\footnote{A zero
+    linear map maps any vectors to the zero vector.} from
   $\mathbf{R}^2$ to $\mathbf{R}$.
 \end{theorem}
 \begin{theorem}[The intermediate value theorem]
   Let $f:I\to \mathbf{R}$ be a continuous function,where $I=[a,b]$ is a
   closed interval of $\mathbf{R}$.For any real number $u$ between
-  $f(a)$ and $f(b)$,there exist $\xi\in [a,b]$ such that $f(\xi)=u$.
+  $f(a)$ and $f(b)$,there exists a $\xi\in [a,b]$ such that $f(\xi)=u$.
 \end{theorem}
 
 And we need four lemmas.
 \begin{lemma}\label{lemma:4}
   Let $M_1M_2M_3$ be a nondegenerate triangle,let $M$ be an arbitrary
-  point in the interior of the triangle region.As is shown in Figure
+  point in the interior of the triangle region.As shown in figure
   \eqref{fig:0}. Then $$\hbox{rad}\angle M_1MM_3>\hbox{rad}\angle
   M_1M_2M_3$$,where $\hbox{rad}\angle M_1MM_3$ is the radian measure of
   the angle $\angle M_1MM_3$.
@@ -111,7 +110,7 @@ And we need four lemmas.
 \end{lemma}
 
 \begin{lemma}
-  For unit vectors $\mathbf{e_1,e_2,e_3}$ on the plane $\mathbf{R}^2$,
+  For unit vectors $\mathbf{e_1,e_2,e_3}$ on the Euclidean plane $\mathbf{R}^2$,
 $$
 \mathbf{e_1+e_2+e_3=0}
 $$
@@ -123,32 +122,31 @@ vectors is $\frac{2\pi}{3}$.
 \end{proof}
 \begin{lemma}\label{theorem:1.22}
 When the radian measure of all the interior angles of the triangle
-$P_1P_2P_3$ are less than $\frac{2\pi}{3}$,we can
-find a unique point $F'$ in the interior of the triangle region,such
-that
+$P_1P_2P_3$ are less than $\frac{2\pi}{3}$,then we can
+find a unique point $F'$ in the interior of the triangle region
+satisfying
 $$
 \mbox{rad}\angle P_1F'P_2=\mbox{rad}\angle P_2F'P_3=\mbox{rad}\angle P_3F'P_1=\frac{2\pi}{3}.
 $$
 \end{lemma}
 
 \begin{proof}
-As is shown in figure
-\eqref{fig:1},draw a family of circles in which all of the circles
-pass through $P_2$ and $P_3$.Suppose that an interior  point  of
-the triangle region $F$ is on a given
-circle,then $\hbox{rad}\angle P_3FP_2$ is a constant.Now we let this given
-circle move while keep the property that this circle passes through
+As shown in figure
+\eqref{fig:1},suppose that an interior  point  of
+the triangle region $F$ is on a circle which passes through
+$P_2,P_3$,then $\hbox{rad}\angle P_3FP_2$ is a
+constant,i.e,$\hbox{rad}\angle P_3FP_2$ remains unchanged when $F$
+moves on the circle.Now let this circle move while keeping the property that the circle passes through
 $P_2,P_3$.When the center of this circle moves downward to
 infinity,$\hbox{rad}\angle P_3FP_2$ tends to $\pi$.When
-the center of the circle moves from infinity to a location such that the circle passes through
+the center of this circle moves from infinity to a location such that the circle passes through
 $P_1,P_2$ and $P_3$,then $\hbox{rad}\angle P_3FP_2$ becomes
 $\hbox{rad}\angle P_3P_1P_2$,which is less than $\frac{2\pi}{3}$.So according to
-the intermediate value theorem,there exist a location such that when the center of the circle moves to
-this location, $\hbox{rad}\angle P_3FP_2$ becomes
-$\frac{2\pi}{3}$,denote this circle by $O'$.Now let $F$ moves on this
-circle.When $F$ tends to the line $P_1P_{3}$,$\hbox{rad}\angle P_1FP_3$ tends to
+the intermediate value theorem,there exists a location $G$ such that when the center of this circle moves to
+$G$,then $\hbox{rad}\angle P_3FP_2$ becomes
+$\frac{2\pi}{3}$.Denote the circle centering at $G$ by $O'$.Now let $F$ move on $O'$.When $F$ tends to the line $P_1P_{3}$,$\hbox{rad}\angle P_1FP_3$ tends to
 $\pi$ while $\hbox{rad}\angle P_1FP_2$ tends to $2\pi-\pi-\frac{2\pi}{3}=\frac{\pi}{3}$.
-.When $F$ tends to the line $P_1P_2$,
+When $F$ tends to the line $P_1P_2$,
 $\hbox{rad}\angle P_1FP_2$ tends to $\pi$ while $\hbox{rad}\angle P_1FP_3$ tends
 to $2\pi-\pi-\frac{2\pi}{3}=\frac{\pi}{3}$.So according to the
 intermediate value theorem,there exists a point $F'$ on the circle $O'$ such
@@ -180,11 +178,11 @@ And the uniqueness of the point $F'$ is obvious by lemma 4.
 \psdots[dotstyle=*](12.22,-0.84)
 \rput[bl](12.29,-0.73){{$P_2$}}
 \psdots[dotstyle=*](8.72,0.21)
-\rput[bl](8.79,0.32){$C$}
+%\rput[bl](8.79,0.32){$C$}
 \psdots[dotstyle=*](8.72,-0.45)
 \rput[bl](8.79,-0.35){}
 \psdots[dotstyle=*](8.72,-2.56)
-\rput[bl](8.79,-2.45){}
+\rput[bl](8.79,-2.45){$G$}
 \psdots[dotstyle=*](7.93,1.26)
 \rput[bl](8,1.36){{$F$}}
 \end{scriptsize}
@@ -193,9 +191,9 @@ And the uniqueness of the point $F'$ is obvious by lemma 4.
 \end{figure}
 
 \begin{lemma}
-  Let $f:\mathbf{R}^2\to \mathbf{R}$ be continuous,and $f$ is  differentiable
+  Let $f:\mathbf{R}^2\to \mathbf{R}$ be continuous,and $f$ be differentiable
   in the deleted neighborhood\footnote{The deleted neighborhood of a
-    point is the neighborhood of this point which exclude the point
+    point is the neighborhood of the point excluding the point
     itself.} of $P\in \mathbf{R}^2$.A line $l$ in
   $\mathbf{R}^2$ passes through $P$.For any sequence of points $Q_1,Q_2,\cdots,Q_n,\cdots$ on
   $l$ such that $\lim_{n\to\infty}|Q_nP|=0$($P$ is not in the sequence),if
@@ -221,7 +219,7 @@ Let $P=(x_{P},y_{P})$,$P_1=(x_{P_{1}},y_{P_{1}}),P_2=(x_{P_{2}},y_{P_{2}}),P_3=(
   Any triangle $P_1P_2P_3$ has a Fermat point.
 \end{theorem}
 \begin{proof}
-Draw a circle $O_1$ centered at $P_1$,whose radius $r$ is large
+Draw a circle $O_1$ centering at $P_1$,whose radius $r$ is large
 enough.Then $$D_{1}=\{|P-P_1|\leq r:P\in \mathbf{R}^2\}$$ is a bounded
 closed disk.According to the extreme value theorem,$f$ must
 attain a minimum on $D_1$.When $r$ is large,the minimum point of $f$ on
@@ -271,8 +269,8 @@ are unit vectors.According to lemma 5,it is easy to verify that equation
 triangle region,and the radian measure of the angle between any
 two of the unit vectors is $\frac{2\pi}{3}$.
 
-If there is no point satisfying equation \eqref{eq:2},then there is no minimum point of $f$ except points
-$P_1,P_2,P_{3}$,which means that there is no Fermat point of the triangle except
+If there is no point satisfying equation \eqref{eq:2},then there is no
+minimum point of $f$ on $\mathbf{R}^2\backslash\{P_1,P_2,P_3\}$,which means that there is no Fermat point of the triangle except
 points $P_1,P_2,P_3$.But according to the existence of the Fermat
 point(Theorem \eqref{theorem:3}),we
 know that the Fermat point of the triangle do exist,so the Fermat point of the triangle must be on the vertex of the triangle
@@ -306,7 +304,7 @@ P_3P_{0}P_1=\frac{2\pi}{3}$.
 
 And the  point $P_0$ is the unique point satisfying equation
 \eqref{eq:2},which means that $P_0$ is the only possible minimum point of $f$ except
-$P_1,P_2,P_3$.So if we managed to prove that  none of the points $P_1,P_2,P_3$ are
+$P_1,P_2,P_3$.So if we managed to prove that  none of the points $P_1,P_2,P_3$ is
 the minimum point of $f$,then we managed to prove that $P_0$ is the unique
 Fermat point of $f$.Now we do this job.
 
@@ -330,7 +328,7 @@ $$
 this is because $\mbox{rad}\angle P_2P_1P_3<\frac{2\pi}{3}$.So as $n$
 goes to
 infinity,$\frac{\mathbf{L_{n}}}{\mathbf{|L_{n}|}}+\frac{\mathbf{M_{n}}}{|\mathbf{M_{n}}|}+\frac{\mathbf{N_{n}}}{\mathbf{|N_{n}|}}$
-tends to a nonzero vector,so as $n$ goes to infinity,$f'(Q_n)$ tends
+tends to a nonzero vector.So as $n$ goes to infinity,$f'(Q_n)$ tends
 to a nonzero linear map from $\mathbf{R}^2$ to $\mathbf{R}$.Done.
 
 So $P_1$ is not a minimum point of $f$.Similarly,$P_2,P_3$ are not
