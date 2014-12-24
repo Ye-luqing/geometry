@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm,euler}
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{amsfonts}
+\usepackage{graphicx,color}
+\usepackage{mathrsfs}
+\usepackage[all]{xy}
+\usepackage{fancybox}
+\newtheorem*{theo}{Theorem}
+\newtheorem*{exe}{Exercise}
+\newtheorem*{rem}{Remark}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{coro}{Corollary}
+\newtheorem*{exa}{Example}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{Exercise3.12}\author{Luqing Ye\footnote{An undergraduate at Hangzhou Normal University,Email:yeluqingmathematics@gmail.com}}
+\maketitle\noindent
+\begin{exercise}
+  Let $\omega$ and $v$ be $1$-forms on $T_p\mathbf{R}^2$.Show that
+  $\om\wedge v(V_1,V_2)$ is the area of the parallelogram spanned by
+  $V_1$ and $V_2$,times the area of the parallelogram spanned by
+  $\langle \om\rangle$ and $\langle v\rangle$.
+\end{exercise}
+\begin{proof}
+Let $V_1=\langle p_1,p_2\rangle,V_2=\langle q_1,q_2\rangle$.Let
+$\om\langle dx,dy\rangle=adx +b dy$,$v\langle dx,dy\rangle=c dx+d dy$.
+  \begin{align*}
+    \om\wedge v(V_1,V_2)&=
+    \begin{vmatrix}
+      \om(V_1)&v(V_1)\\
+\om(V_2)&v(V_2)
+    \end{vmatrix}\\&=
+    \begin{vmatrix}
+      ap_1+bp_2&cp_1+dp_2\\
+aq_1+bq_2&cq_1+dq_2
+    \end{vmatrix}\\&=
+    \begin{vmatrix}
+      a&b\\
+c&d
+    \end{vmatrix}.
+    \begin{vmatrix}
+      p_1&q_{1}\\
+p_{2}&q_2
+    \end{vmatrix}
+  \end{align*}
+Done.
+\end{proof}
+
+
+
+
+
+
+% \bibliographystyle{unsrt}
+% \bibliography{}
+\end{document}
