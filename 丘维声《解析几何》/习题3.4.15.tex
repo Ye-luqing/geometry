@@ -1,0 +1,148 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newtheorem*{lemma}{引理}
+\newtheorem*{coro}{推论}
+\newtheorem*{exa}{例}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\setlength\parindent{0pt}
+\begin{document}
+\title{\huge{\bf{习题3.4.15}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}
+设三条直线$l_1,l_2,l_3$两两异面,且平行于同一平面,证明:与$l_1,l_2,l_3$
+都相交的直线组成的曲面是马鞍面.
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+设直线$l_1$的方程是
+$$
+\frac{x}{1}=\frac{y}{0}=\frac{z}{0},
+$$
+直线$l_2$的方程是
+$$
+\frac{x}{a}=\frac{y}{1}=\frac{z-p}{0},
+$$
+其中$a\neq 1$.直线$l_3$的方程是
+$$
+\frac{x}{a'}=\frac{y}{1}=\frac{z-p'}{0},
+$$
+设与$l_1,l_2,l_3$都相交的直线方程为
+$$
+\frac{x-q_1}{t_1}=\frac{y-q_2}{t_2}=\frac{z-q_3}{t_3},
+$$
+则我们有
+\begin{align*}
+  \begin{vmatrix}
+    q_1&q_2&q_3\\
+1&0&0\\
+t_1&t_2&t_3
+  \end{vmatrix}=0,
+\end{align*}
+即
+\begin{equation}\label{eq:1}
+q_2t_3=q_3t_2.
+\end{equation}
+\begin{align*}
+  \begin{vmatrix}
+      q_1&q_2&q_3-p\\
+a&1&0\\
+t_1&t_2&t_3
+  \end{vmatrix}=0,
+\end{align*}
+结合方程\eqref{eq:1},即
+\begin{equation}\label{eq:2}
+t_1q_3-t_1p+at_2p-q_1t_3=0.\iff t_1q_3-q_1t_3=t_1p-at_2p.
+\end{equation}
+\begin{align*}
+  \begin{vmatrix}
+    q_1&q_2&q_3-p'\\
+a'&1&0\\
+t_1&t_2&t_3
+  \end{vmatrix}=0.
+\end{align*}
+结合方程\eqref{eq:1},即
+\begin{equation}
+  \label{eq:3}
+  t_1q_3-t_1p'+a't_2p'-q_1t_3=0.\iff t_1q_3-q_1t_3=t_1p'-a't_2p'.
+\end{equation}
+由方程\eqref{eq:2}和方程\eqref{eq:3}可得
+\begin{equation}
+  \label{eq:4}
+  t_1=\frac{at_2p-a't_2p'}{p-p'}.
+\end{equation}
+将方程\eqref{eq:4}代入方程\eqref{eq:2},可得
+\begin{equation}
+  \label{eq:5}
+  q_3 \frac{at_2p-a't_2p'}{p-p'}-q_1t_3=p\frac{at_2p-a't_2p'}{p-p'} -at_2p.
+\end{equation}
+将方程\eqref{eq:5}两边同时乘以$q_3$,可得
+\begin{equation}
+  \label{eq:6}
+  q_3^2\frac{at_2p-a't_2p'}{p-p'}-q_1q_3t_3=p \frac{at_2q_3p-a't_2q_3p'}{p-p'}-at_2q_3p.
+\end{equation}
+将方程\eqref{eq:1}代入方程\eqref{eq:6},可得
+\begin{equation}
+  \label{eq:7}
+    q_3q_{2}\frac{apt_{3}-a'p't_{3}}{p-p'}-q_1q_3t_3=p \frac{aq_{2}t_{3}p-a'q_{2}t_{3}p'}{p-p'}-aq_{2}t_3p.
+\end{equation}
+当$t_3\neq 0$时,在方程\eqref{eq:7}两边同时除以$t_3$,可得
+\begin{equation}
+  \label{eq:8}
+      q_3q_{2}\frac{ap-a'p'}{p-p'}-q_1q_3=p \frac{aq_{2}p-a'q_{2}p'}{p-p'}-aq_{2}p.
+\end{equation}
+令 $\frac{ap-a'p'}{p-p'}=-m,ap=n,mp-n=r$,则方程\eqref{eq:8}即
+\begin{equation}
+  \label{eq:9}
+  q_1q_3+mq_{2}q_{3}+rq_2=0.
+\end{equation}
+这是个双曲抛物面(具体证明放在以后).
+\end{proof}
+\end{document}
