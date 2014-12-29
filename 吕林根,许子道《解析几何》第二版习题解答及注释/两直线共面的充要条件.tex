@@ -1,0 +1,157 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{两直线共面的充要条件}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle\ni
+下面这道题目来自吕林根,许子道编《解析几何》例3.8.3.
+\begin{theorem}
+  试证两直线
+$$
+l_1:
+\begin{cases}
+  A_1x+B_1y+C_1z+D_1=0,\\
+  A_2x+B_2y+C_2z+D_2=0.
+\end{cases}
+$$
+与
+$$l_2:
+\begin{cases}
+  A_3x+B_3y+C_3z+D_3=0,\\
+  A_4x+B_4y+C_4z+D_4=0
+\end{cases}
+$$
+在同一平面上的充要条件是
+$$
+\begin{vmatrix}
+  A_1&B_1&C_1&D_1\\
+  A_2&B_2&C_2&D_2\\
+  A_3&B_3&C_3&D_3\\
+  A_4&B_4&C_4&D_4\\
+\end{vmatrix}=0.
+$$
+\end{theorem}
+\begin{proof}[\textbf{证明}]
+  行列式为$0$时,向
+  量$(A_1,B_1,C_1,D_1),\cdots,(A_4,B_4,C_4,D_4)$线性相关.不失一般性
+  地,不妨
+  设$(A_1,B_1,C_1,D_1)$能被
+  $(A_2,B_2,C_2,D_2),(A_3,B_3,C_3,D_3),(A_4,B_4,C_4,D_4)$线性表出为
+$$
+(A_1,B_1,C_1,D_1)=a(A_2,B_2,C_2,D_2)+b(A_3,B_3,C_3,D_3)+c(A_4,B_4,C_4,D_4).
+$$
+于是,
+\begin{equation}
+  \label{eq:1}
+  (A_1,B_1,C_1,D_1)-a(A_2,B_2,C_2,D_2)=b(A_3,B_3,C_3,D_3)+c(A_4,B_4,C_4,D_4).
+\end{equation}
+由于平面$A_3x+B_3y+C_3z+D_3=0$和$A_4x+B_4y+C_4z+D_4=0$相交于直
+线$l_2$,因此平面$b(A_3,B_3,C_3,D_3)+c(A_4,B_4,C_4,D_4)$也经过直
+线$l_2$,于是,平面$(A_1,B_1,C_1,D_1)-a(A_2,B_2,C_2,D_2)$经过直线
+$l_2$.但是由于平面$(A_1,B_1,C_1,D_1)-a(A_2,B_2,C_2,D_2)$还经过$l_1$,因
+此$l_1$和$l_2$共面.\\\\
+
+\ni 而当$l_1,l_2$共面时,必定有一个平面$s$同时经过$l_1,l_2$.且$s$能表示
+成
+$$
+ p(A_1x+B_1y+C_1z+D_1)+q(A_2x+B_2y+C_2z+D_2),
+$$
+而且$s$能表示成
+$$
+m(A_3x+B_3y+C_3z+D_3)+n(A_4x+B_4y+C_4z+D_4),
+$$
+于是,
+$$
+ p(A_1x+B_1y+C_1z+D_1)+q(A_2x+B_2y+C_2z+D_2)=m(A_3x+B_3y+C_3z+D_3)+n(A_4x+B_4y+C_4z+D_4).
+$$
+这就表明了向量$(A_1,B_1,C_1,D_1),\cdots,(A_4,B_4,C_4,D_4)$线性相关,于
+是行列式为$0$.
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+为了证明这个定理,我们只用证明,直线$l_1$和$l_2$共面的充要条件是,四维空
+间$\mathbf{R}^4$中经过原点的四个三维超平面
+\begin{equation}
+  \label{eq:1}
+  A_1x+B_1y+C_1z+D_1w=0,
+\end{equation}
+\begin{equation}
+  \label{eq:2}
+  A_2x+B_2y+C_2z+D_2w=0,
+\end{equation}
+\begin{equation}
+  \label{eq:3}
+  A_3x+B_3y+C_3z+D_3w=0,
+\end{equation}
+\begin{equation}
+  \label{eq:4}
+  A_4x+B_4y+C_4z+D_4w=0.
+\end{equation}
+的公共交点不唯一.

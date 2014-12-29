@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\setlength\parindent{0pt}
+\begin{document}
+\title{\huge{\bf{圆锥面上两族直母线坍缩成一族直母线}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+我们来看锥面
+\begin{equation}
+  \label{eq:1}
+  \frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=0.
+\end{equation}
+该锥面可以看成单叶双曲面
+\begin{equation}
+  \label{eq:2}
+  \frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=\frac{1}{\lambda^2}
+\end{equation}
+当$\lambda\to\infty$的极限情形.我们知道,单叶双曲面\eqref{eq:2}有两族直
+母线
+$$
+\begin{cases}
+  \gamma(\frac{x}{a}+\frac{z}{c})= \mu(\frac{1}{\lambda}+\frac{y}{b}),\\
+\mu\frac{x}{a}-\frac{z}{c}=\gamma (\frac{1}{\lambda}-\frac{y}{b})
+\end{cases},
+\begin{cases}
+  \alpha(\frac{x}{a}+\frac{z}{c})=\gamma(\frac{1}{\lambda}-\frac{y}{b}),\\
+\gamma(\frac{x}{a}-\frac{z}{c})=\alpha (\frac{1}{\lambda}+\frac{y}{b})  
+\end{cases}
+$$
+当$\frac{1}{\lambda}$没消失的时候,两族直母线还是两族直母线.而当
+$\frac{1}{\lambda}$消失的时候,也就是单叶双曲面\eqref{eq:2}退化为锥面
+\eqref{eq:1}的时候,两族直母线就坍缩为一族了.这是有点意思的现象.
+\end{document}

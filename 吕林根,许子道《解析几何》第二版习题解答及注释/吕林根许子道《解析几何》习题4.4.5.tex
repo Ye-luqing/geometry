@@ -1,0 +1,116 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{euler}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=FZQingKeBenYueSongS-R-GB]{FZSongKeBenXiuKaiS-R-GB}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{吕林根,许子道《解析几何》习题4.4.5}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}
+一直线分别交坐标面$yOz$,$zOx$,$xOy$于三点$A,B,C$.当直线变动时,直线上的
+三定点$A,B,C$也分别在三个坐标面上变动,另外直线上有第四个点$P$,它与
+$A,B,C$三点的距离分别为$a,b,c$,当直线按照这样的规定变动时,试求$P$点的
+轨迹.  
+\end{exercise}
+\begin{proof}[\textbf{解}]
+设直线的方程为
+$$
+\frac{x-q_1}{t_1}=\frac{y-q_2}{t_2}=\frac{z-q_3}{t_3},
+$$
+其中 $q_1,q_2,q_3,t_1,t_2,t_3$都是参数,且$t_1,t_2,t_3$为直线的一个方向
+余弦.令$x=0$,可得
+$$
+A:(0,q_2-\frac{q_1}{t_1}t_2,q_3-\frac{q_1}{t_1}t_3).
+$$
+令$y=0$,可得
+$$
+B:(q_1-\frac{q_2}{t_2}t_1,0,q_3-\frac{q_2}{t_2}t_3).
+$$
+令$z=0$,可得
+$$
+C:(q_1-\frac{q_3}{t_3}t_1,q_2-\frac{q_3}{t_3}t_2,0).
+$$
+%$A,B,C$是直线上的定点,当且仅当存在常数$\lambda$,使得
+%\begin{equation}\label{eq:1}
+%\ov{AB}=\lambda \ov{BC},
+%\end{equation}
+%且 $|\ov{AB}|^{2}$是一个常数$l$.由方程\eqref{eq:1}可得
+%\begin{equation}
+%  \label{eq:2}
+%  \lambda=\frac{q_1-\frac{q_2}{t_2}t_1}{\frac{q_2}{t_2}t_1-\frac{q_3}{t_3}t_1}=\frac{\frac{q_1}{t_1}-\frac{q_2}{t_2}}{\frac{q_2}%{t_2}-\frac{q_3}{t_3}}.
+%\end{equation}
+%由$|\ov{AB}|^{2}$是一个常数$l$,最终可得,
+%\begin{equation}
+%  \label{eq:3}
+%  (t_{1}^{2}+t_{2}^{2}+t_{3}^{2})(\frac{q_1}{t_{1}}-\frac{q_2}{t_2})^2=l^2.\Rightarrow
+%  (\frac{q_1}{t_{1}}-\frac{q_2}{t_2})^{2}=l^{2}.
+%\end{equation}
+现在,设$P$的坐标为$(x_{p},y_{p},z_p)$.则由题目条件可得
+$$
+\begin{cases}
+  (\frac{x_p}{t_1},\frac{y_p}{t_2},\frac{z_p}{t_3})=(0,\frac{q_2}{t_{2}}-\frac{q_1}{t_1},\frac{q_3}{t_{3}}-\frac{q_1}{t_1})\pm
+  a(1,1,1),\\
+(\frac{x_p}{t_1},\frac{y_p}{t_2},\frac{z_p}{t_3})=(\frac{q_1}{t_{1}}-\frac{q_2}{t_2},0,\frac{q_3}{t_{3}}-\frac{q_2}{t_2})\pm
+b(1,1,1),\\
+(\frac{x_p}{t_1},\frac{y_p}{t_2},\frac{z_p}{t_3})=(\frac{q_1}{t_{1}}-\frac{q_3}{t_3},\frac{q_2}{t_{2}}-\frac{q_3}{t_3},0)\pm c(1,1,1).
+\end{cases}
+$$
+可见,
+$$
+\frac{x_p}{t_1}=\pm a,\frac{y_p}{t_2}=\pm b,\frac{z_p}{t_3}=\pm c,
+$$
+可见,
+$$
+\frac{x_p^2}{a^2}+\frac{y_p^2}{b^2}+\frac{z_p^2}{c^2}=t_1^{2}+t_{2}^{2}+t_{3}^{2}=1.
+$$
+可见,点$P$的轨迹为$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$.
+\end{proof}
+\begin{remark}
+此题中,“定点”这个条件是不必要的.  
+\end{remark}
+\end{document}

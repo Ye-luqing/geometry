@@ -1,0 +1,57 @@
+﻿\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb} \usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref} \usepackage{geometry} \usepackage{yhmath}
+\usepackage{pstricks-add} \usepackage{framed,mdframed}
+\usepackage{graphicx,color} \usepackage{mathrsfs,xcolor}
+\usepackage[all]{xy} \usepackage{fancybox} \usepackage{xeCJK}
+\newtheorem*{theo}{定理} 
+\newtheorem*{exe}{题目}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip} 
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\numberwithin{equation}{section}
+\setlength\parindent{0pt}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} \renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{{\bf{吕林根,许子道《解析几何》例4.1.2\footnote{本解答作为交给解
+        析几何赵老师的第四份作业.}}}} \author{\small{叶卢庆
+    \footnote{叶卢庆(1992-),男,杭州师范大学理学院数学与应用数学专业大
+      四.学号:1002011005.E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}[例4.1.2(但是我把直线的具体的数字改了改)]
+已知圆柱面的轴为$\frac{x}{1}=\frac{y-1}{2}=\frac{z+1}{2}$,点$(1,-2,1)$
+在此圆柱面上,求圆柱面方程.
+\end{exercise}
+\begin{proof}[\textbf{解}]
+思路是,圆柱面上所有点到轴的距离和点$(1,-2,1)$到轴的距离相等.最后求得的
+结果是
+$$
+8x_0^2+5y_0^2+5z_0^2-18y_0+18z_0-4x_0y_0-4x_0z_0-8y_0z_0=107.
+$$
+\end{proof}
+\end{document}

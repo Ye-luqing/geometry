@@ -1,0 +1,85 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\ov}{\overrightarrow} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{吕林根,许子道《解析几何》习题3.2.7}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}
+  设平面$\pi$为$Ax+By+Cz+D=0$,它与联结两点$M_1(x_1,y_1,z_1)$和
+  $M_2(x_2,y_2,z_2)$的直线相交于点$M$,且$\ov{M_1M}=\lambda \ov{MM_2}$,
+  求证
+$$
+\lambda=-\frac{Ax_1+By_1+Cz_1+D}{Ax_2+By_2+Cz_2+D}.
+$$
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+$\lambda$之值,即为$M_1$到平面的距离与$M_2$到平面的距离之比,即位$M_1$与
+平面的离差与$M_2$与平面的离差之比的相反数.我们先把平面的一般方程化为法
+式方程,为
+$$
+\pm\frac{A}{\sqrt{A^2+B^2+C^2}}x\pm\frac{B}{\sqrt{A^2+B^2+C^2}}\pm\frac{C}{\sqrt{A^2+B^2+C^2}}\pm\frac{D}{\sqrt{A^2+B^2+C^2}}=0.
+$$
+于是点$M_1$和平面的离差为
+$$
+\pm\frac{A}{\sqrt{A^2+B^2+C^2}}x_1\pm
+\frac{B}{\sqrt{A^2+B^2+C^2}}y_{1}\pm \frac{C}{\sqrt{A^2+B^2+C^2}}z_{1}\pm \frac{D}{\sqrt{A^2+B^2+C^2}},
+$$
+同理点$M_2$和平面的离差为
+$$
+\pm\frac{A}{\sqrt{A^2+B^2+C^2}}x_2\pm
+\frac{B}{\sqrt{A^2+B^2+C^2}}y_2\pm \frac{C}{\sqrt{A^2+B^2+C^2}}z_2\pm \frac{D}{\sqrt{A^2+B^2+C^2}},
+$$
+两个离差相除,并取相反数,可得
+$$
+\lambda=-\frac{Ax_1+By_1+Cz_1+D}{Ax_2+By_2+Cz_2+D}.
+$$
+\end{proof}
+\end{document}

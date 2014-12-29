@@ -1,0 +1,181 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{吕林根,许子道《解析几何》习题4.7.6}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}
+  求与下列三条直线
+$$
+\begin{cases}
+  x=1,\\
+y=z,
+\end{cases}
+\begin{cases}
+  x=-1,\\
+y=-z
+\end{cases}
+$$
+与
+$$
+\frac{x-2}{-3}=\frac{y+1}{4}=\frac{z+2}{5}.
+$$
+都共面的直线所构成的曲面.
+\end{exercise}
+\begin{proof}[\textbf{解}]
+ 设直线的方程为
+ \begin{equation}
+   \label{eq:1}
+   \frac{x-p_1}{\lambda_1}=\frac{y-p_2}{\lambda_2}=\frac{z-p_3}{\lambda_3}.
+ \end{equation}
+直线\eqref{eq:1}与直线$
+\begin{cases}
+  x=1,\\
+y=z
+\end{cases}
+$共面,表明
+\begin{equation}\label{eq:2}
+\begin{vmatrix}
+  \lambda_1&\lambda_2&\lambda_3\\
+0&1&1\\
+p_1-1&p_2&p_3
+\end{vmatrix}=0,
+\end{equation}
+直线\eqref{eq:1}与直线$
+\begin{cases}
+  x=-1,\\
+y=-z
+\end{cases}
+$共面,表明
+\begin{equation}
+  \label{eq:3}
+  \begin{vmatrix}
+    \lambda_1&\lambda_2&\lambda_3\\
+0&1&-1\\
+p_1+1&p_2&p_3
+  \end{vmatrix}=0,
+\end{equation}
+直线\eqref{eq:1}与直线$\frac{x-2}{-3}=\frac{y+1}{4}=\frac{z+2}{5}$共面,表
+明
+\begin{equation}
+  \label{eq:4}
+  \begin{vmatrix}
+    \lambda_1&\lambda_2&\lambda_3\\
+-3&4&5\\
+p_1-2&p_2+1&p_3+2
+  \end{vmatrix}=0.
+\end{equation}
+方程\eqref{eq:2},\eqref{eq:3},\eqref{eq:4}联立,可知
+$$
+\begin{cases}
+  (p_3-p_2)\lambda_1+(p_1-1)\lambda_2-(p_1-1)\lambda_3=0,\\
+(p_3+p_2)\lambda_1-(p_1+1)\lambda_2-(p_1+1)\lambda_3=0,\\
+(4p_3-5p_2+3)\lambda_1+(5p_1+3p_3-4)\lambda_2+(-3p_2-4p_1+5)\lambda_3=0
+\end{cases}
+$$
+该关于$\lambda_1,\lambda_2,\lambda_3$的方程组显然不止有一个解
+$(0,0,0)$,因此行列式
+$$
+\begin{vmatrix}
+p_3-p_2&p_1-1&-(p_1-1)\\
+p_3+p_2&-(p_1+1)&-(p_1+1)\\
+4p_3-5p_2+3&5p_1+3p_3-4&-3p_2-4p_1+5
+\end{vmatrix}=0.
+$$
+将第二行加到第一行上,可得
+$$
+\begin{vmatrix}
+2p_3&-2&-2p_1\\
+p_3+p_2&-(p_1+1)&-(p_1+1)\\
+4p_3-5p_2+3&5p_1+3p_3-4&-3p_2-4p_1+5  
+\end{vmatrix}=0.
+$$
+将第一行乘以$-2$加到第三行上,可得
+$$
+\begin{vmatrix}
+2p_3&-2&-2p_1\\
+p_3+p_2&-(p_1+1)&-(p_1+1)\\
+-5p_2+3&5p_1+3p_3&-3p_2+5  
+\end{vmatrix}=0.
+$$
+即
+$$
+\begin{vmatrix}
+p_3&-1&-p_1\\
+p_3+p_2&-(p_1+1)&-(p_1+1)\\
+-5p_2+3&5p_1+3p_3&-3p_2+5  
+\end{vmatrix}=0.
+$$
+再将第一行乘以$-1$加到第二行上,可得
+$$
+\begin{vmatrix}
+p_3&-1&-p_1\\
+p_2&-p_1&-1\\
+-5p_2+3&5p_1+3p_3&-3p_2+5  
+\end{vmatrix}=0.
+$$
+再将第二行乘以$5$加到第三行上,可得
+$$
+\begin{vmatrix}
+p_3&-1&-p_1\\
+p_2&-p_1&-1\\
+3&3p_3&-3p_2
+\end{vmatrix}=0.
+$$
+即
+$$
+p_1^2+p_2^2-p_3^2=1.
+$$
+可见,曲面为
+$$
+x^2+y^2-z^2=1.
+$$
+\end{proof}
+\end{document}

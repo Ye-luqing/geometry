@@ -1,0 +1,81 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{吕林根,许子道《解析几何》习题3.2.10}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}
+  试求由平面$\pi_1:2x-y+2z-3=0$与$\pi_2:3x+2y-6z-1=0$所构成的二面角的
+  角平分面的方程,在此二面角内有点$M(1,2,-3)$.
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+设欲求的角平分面上有点$(x,y,z)$,则$(x,y,z)$到平面$\pi_1,\pi_2$的距离相
+等,即
+$$
+\frac{|2x-y+2z-3|}{\sqrt{2^2+1^2+2^2}}=\frac{|3x+2y-6z-1|}{\sqrt{3^2+2^2+6^2}},
+$$
+于是或者有
+\begin{equation}
+  \label{eq:1}
+  \frac{2x-y+2z-3}{3}=\frac{3x+2y-6z-1}{7}\iff 5x-13y+32z-18=0.
+\end{equation}
+或者有
+\begin{equation}
+  \label{eq:2}
+-  \frac{2x-y+2z-3}{3}=\frac{3x+2y-6z-1}{7}\iff 23x-y-4z-24=0.
+\end{equation}
+根据题意,欲求的平面上存在点,该点与$M$在同一个二面角内.而我们知道,
+$$
+2\times 1-2+2\times(-3)-3<0,3\times 1+2\times 2-6\times(-3)-1>0,
+$$
+可见,欲求的平面方程只可能是\eqref{eq:2}.
+\end{proof}
+\end{document}

@@ -1,0 +1,140 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\ov}{\overrightarrow} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{吕林根,许子道《解析几何》习题3.1.1}}}
+\author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数
+      学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}
+  求下列各平面的坐标式参数方程和一般方程.
+  \begin{itemize}
+  \item 通过点$M_1(3,1,-1)$和$M_2(1,-1,0)$且平行于向量$\{-1,0,2\}$的平
+    面.
+  \item 通过点$M_1(1,-5,1)$和$M_2(3,2,-2)$且垂直于$xOy$坐标面的平面.
+  \item 已知四点$A(5,1,3),B(1,6,2),C(5,0,4),D(4,0,6)$,求通过直线$AB$且
+    平行于直线$CD$的平面,并求通过直线$AB$且与$\triangle ABC$所在平面垂
+    直的平面.
+  \end{itemize}
+\end{exercise}
+\begin{itemize}
+\item 平面的坐标式参数方程由平面的向量式参数方程演化而来.设平面上任意一
+  点为$M(x,y,z)$,则
+  \begin{align*}
+    \ov{M_1M}&=u\ov{M_1M_2}+v(-1,0,2)\\&=u(-2,-2,1)+v(-1,0,2)\\&=(-2u-v,-2u,u+2v)
+  \end{align*}
+  可见,
+$$
+(x,y,z)-(3,1,-1)=(-2u-v,-2u,u+2v).
+$$
+于是,平面的坐标式参数方程为
+$$
+\begin{cases}
+  x=3-2u-v,\\
+  y=1-2u,\\
+  z=-1+u+2v
+\end{cases}.
+$$
+解出了平面的坐标式一般方程之后,就可以解出平面的一般方程为
+$$
+4x+2z-3y-7=0.
+$$
+\item 设平面上任意一点为$M(x,y,z)$,则
+  \begin{align*}
+    \ov{M_1M}&=u\ov{M_1M_2}+v(0,0,1)\\&=u(2,7,-3)+v(0,0,1)\\&=(2u,7u,-3u+v).
+  \end{align*}
+于是,平面的坐标式参数方程为
+$$
+\begin{cases}
+  x=1+2u,\\
+y=-5+7u,\\
+z=1-3u+v.
+\end{cases}
+$$
+由坐标式参数方程可得平面的一般方程为
+$$
+7x-2y-17=0.
+$$
+\item \subitem 设平面上的任意一点为$M(x,y,z)$,则
+  \begin{align*}
+    \ov{AM}=u\ov{AB}+v\ov{CD}&=u(-4,5-1)+v(-1,0,2)\\&=(-4u-v,5u,-u+2v).
+  \end{align*}
+于是,平面的参数方程为
+$$
+\begin{cases}
+  x=5-4u-v,\\
+y=1+5u,\\
+z=3-u+2v
+\end{cases}.
+$$
+由平面的参数方程可得平面的一般方程为
+$$
+10x+9y+5z-45=0.
+$$
+\subitem 下面我们来求另外一个平面的方程.$\triangle ABC$所在平面的一个
+法向量为$\frac{1}{4}\ov{AB}\times\ov{AC}=\frac{1}{4}(-4,5,-1)\times
+(0,-1,1)=(1,1,1)$.设欲求平面上任意一点为$M$,于是欲求平面的向量式参数方
+程为
+$$
+\ov{AM}=u\ov{AB}+v(1,1,1)=u(-4,5,-1)+v(1,1,1)=(-4u+v,5u+v,-u+v).
+$$
+于是欲求平面的坐标式参数方程为
+$$
+\begin{cases}
+  x=5-4u+v,\\
+y=1+5u+v,\\
+z=3-u+v
+\end{cases}.
+$$
+可见,欲求平面的一般式方程为
+$$
+2x+y-3z-2=0.
+$$
+\end{itemize}
+\end{document}

@@ -1,0 +1,86 @@
+﻿\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb} \usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref} \usepackage{geometry} \usepackage{yhmath}
+\usepackage{pstricks-add} \usepackage{framed,mdframed}
+\usepackage{graphicx,color} \usepackage{mathrsfs,xcolor}
+\usepackage[all]{xy} \usepackage{fancybox} \usepackage{xeCJK}
+\newtheorem*{theo}{定理} 
+\newtheorem*{exe}{题目}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip} 
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\numberwithin{equation}{section}
+\setlength\parindent{0pt}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} \renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{{\bf{吕林根,许子道《解析几何》例4.1.1\footnote{本解答作为交给解
+        析几何赵老师的第四份作业.}}}} \author{\small{叶卢庆
+    \footnote{叶卢庆(1992-),男,杭州师范大学理学院数学与应用数学专业大
+      四.学号:1002011005.E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}[例4.1.1]
+柱面的准线方程是
+$$
+\begin{cases}
+  x^2+y^2+z^2=1,\\
+2x^2+2y^2+z^2=2,
+\end{cases}
+$$
+而母线的方向数为$-1,0,1$,求这柱面的方程.
+\end{exercise}
+\begin{proof}[\textbf{解}]
+设$(x_0,y_0,z_0)$是柱面上的任意一点.则通过这一点的母线的方程为
+$$
+\frac{x-x_0}{-1}=\frac{y-y_0}{0}=\frac{z-z_0}{1}.
+$$
+该母线通过准线,这意味着存在$(x_1,y_1,z_1)$,满足
+$$
+\begin{cases}
+  x_{1}^2+y_{1}^2+z_{1}^2=1,\\
+2x_{1}^2+2y_{1}^2+z_{1}^2=2,\\
+\frac{x_{1}-x_0}{-1}=\frac{y_{1}-y_0}{0}=\frac{z_{1}-z_0}{1}
+\end{cases}.
+$$
+也即,
+$$
+\begin{cases}
+  x_{1}^2+y_{0}^2+z_{1}^2=1,\\
+2x_{1}^2+2y_{0}^2+z_{1}^2=2,\\
+x_0-x_1=z_1-z_0,\\
+\end{cases}.
+$$
+于是,
+$$
+(x_0+z_{0})^2+y_{0}^2=1,
+$$
+于是柱面方程为
+$$
+(x+z)^2+y^2=1.
+$$
+\end{proof}
+\end{document}
