@@ -47,38 +47,29 @@
 \usepackage[]{caption2} 
 \renewcommand{\captionlabeldelim}{}
 \begin{document}
-\title{Exercise3.12}\author{Luqing Ye\footnote{An undergraduate at Hangzhou Normal University,Email:yeluqingmathematics@gmail.com}}
+\title{Exercise 3.14}\author{Luqing Ye\footnote{An undergraduate at Hangzhou Normal University,Email:yeluqingmathematics@gmail.com}}
 \maketitle\noindent
 \begin{exercise}
-  Let $\omega$ and $v$ be $1$-forms on $T_p\mathbf{R}^2$.Show that
-  $\om\wedge v(V_1,V_2)$ is the area of the parallelogram spanned by
-  $V_1$ and $V_2$,times the area of the parallelogram spanned by
-  $\langle \om\rangle$ and $\langle v\rangle$.
+  Show that for any 1-forms $\omega$ and $v$ on $T\mathbf{R}^3$,there
+  are constants $c_1,c_2$ and $c_3$ such that 
+$$
+\omega \wedge v=c_1dx\wedge dy+c_2dx\wedge dz+c_3dy\wedge dz.
+$$
 \end{exercise}
 \begin{proof}
-Let $V_1=\langle p_1,p_2\rangle,V_2=\langle q_1,q_2\rangle$.Let
-$\om\langle dx,dy\rangle=adx +b dy=\langle\omega\rangle\cdot \langle
-dx,dy\rangle$,$v\langle dx,dy\rangle=c dx+d dy=\langle
-v\rangle\cdot\langle dx,dy\rangle$.
-  \begin{align*}
-    \om\wedge v(V_1,V_2)&=
-    \begin{vmatrix}
-      \om(V_1)&v(V_1)\\
-\om(V_2)&v(V_2)
-    \end{vmatrix}\\&=
-    \begin{vmatrix}
-      ap_1+bp_2&cp_1+dp_2\\
-aq_1+bq_2&cq_1+dq_2
-    \end{vmatrix}\\&=
-    \begin{vmatrix}
-      a&b\\
-c&d
-    \end{vmatrix}.
-    \begin{vmatrix}
-      p_1&q_{1}\\
-p_{2}&q_2
-    \end{vmatrix}
-  \end{align*}
-Done.
+Let $\omega=a_1dx+b_1dy+c_1dz$,$v=a_2dx+b_2dy+c_3dz$.Then 
+\begin{align*}
+\omega\wedge v&=(a_1dx+b_1dy+c_1dz)\wedge
+(a_2dx+b_2dy+c_2dz)\\&=[(a_{1}dx+b_{1}dy)+c_{1}dz]\wedge [(a_2dx+b_2dy)+c_2dz]\\&=(a_1b_2-b_{1}a_{2})dx\wedge
+dy+(a_1c_2-c_{1}a_{2})dx\wedge dz+(b_{1}c_{2}-c_{1}b_{2})dy\wedge dz.
+\end{align*}
 \end{proof}
+
+
+
+
+
+
+% \bibliographystyle{unsrt}
+% \bibliography{}
 \end{document}
