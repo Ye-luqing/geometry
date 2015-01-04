@@ -1,0 +1,182 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm,euler}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newtheorem*{lem}{引理}
+\newtheorem{coro}{推论}
+\newtheorem*{exa}{例}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\newenvironment{lemma}
+{\bigskip\begin{mdframed}\begin{lem}}
+    {\end{lem}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\setlength\parindent{0pt}
+\begin{document}
+\title{\huge{\bf{任意二次形式满足的性质}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+所谓的二次形式,指的是满足如下条件的从$\mathbf{R}^n\times\mathbf{R}^n$到$\mathbf{R}$的双线性变换$T$,满足
+\begin{itemize}
+\item $T(V_1,V_2)=-T(V_2,V_1)$
+\item $T(V_1,V_2+V_3)=T(V_1,V_2)+T(V_1,V_3)$,$T(V_1+V_2,V_3)=T(V_1,V_3)+T(V_2,V_3)$.
+\item $T(V_1,cV_2)=T(cV_1,V_2)=cT(V_1,V_2)$.
+\end{itemize}
+\begin{corollary}
+由第一条,立马可以得到
+$$
+T(V,V)=-T(V,V),
+$$
+因此
+$$
+T(V,V)=0.
+$$  
+\end{corollary}
+\begin{corollary}
+由第三条,可得$\forall c\in \mathbf{R}$,
+$$
+T(V,\mathbf{0})=T(V,c\mathbf{0})=cT(V,\mathbf{0}),
+$$
+因此
+$$
+T(V,\mathbf{0})=0=T(\mathbf{0},V).
+$$
+\end{corollary}
+设$\{v_1,\cdots,v_n\}$是$\mathbf{R}^n$的一组基,则我们只要知道
+$T(v_i,v_j)$的值,就能计算出$T(V,W)$的值,其中$i,j$取遍$[1,n]$中的所有整数,且
+$V,W$是$\mathbf{R}^n$中任意的向量.这是因为,对于$\mathbf{R}^n$中任意的
+向量$V,W$,
+$$
+V=a_1v_1+\cdots+a_nv_n,
+$$
+$$
+W=b_1v_1+\cdots+b_nv_n,
+$$
+因此
+\begin{align*}
+  T(V,W)&=T(a_1v_1+\cdots+a_nv_n,b_1v_1+\cdots+b_nv_n)
+\\&=T(a_1v_1,b_1v_1+\cdots+b_nv_n)+\cdots+T(a_nv_n,b_1v_1+\cdots+b_nv_n)
+\\&=a_1b_{1}T(v_1,v_1)+a_{1}b_{2}T(v_1,v_2)+\cdots+a_{1}b_{n}T(v_1,v_n)
+\\&+\cdots
+\\&+a_{n}b_{1}T(v_n,v_1)+a_{n}b_{2}T(v_n,v_2)+\cdots+a_{n}b_{n}T(v_n,v_n).
+\end{align*}
+而且,
+\begin{lemma}
+$\forall 1\leq i,j\leq n$,都存在相应的$1\leq p,q\leq n$,使得
+$dx_p\wedge dx_q(v_i,v_j)\neq 0$.
+\end{lemma}
+\begin{proof}[\textbf{证明}]
+假若存在$1\leq i,j\leq n$,使得对所有的$1\leq k,l\leq n$,都有
+$dx_k\wedge dx_l(v_i,v_j)=0$,则易得向量$v_{i}$和$v_j$线性相关,这与
+$\{v_1,\cdots,v_n\}$是$\mathbf{R}^n$的一组基矛盾.
+\end{proof}
+根据这个引理,可得
+\begin{theorem}
+对于任意$1\leq i,j\leq n$,都存在相应的实数$c_{i,j}$和相应的
+$1\leq p,q\leq n$,使得
+$$
+T(v_i,v_j)=c_{i,j}dx_p\wedge dx_q(v_i,v_j).
+$$
+\end{theorem}
+综合以上结论,可得每个二次形式$T:\mathbf{R}^n\times \mathbf{R}^n\to \mathbf{R}$都可以被集合$\{dx_i\wedge dx_j:1\leq i,j\leq n\}$里的二次形式进行线性表达.
+\end{document}
+
+
+
+
+
+
+
+
+
+显然,$\mathbf{R}^n\times \mathbf{R}^n$是有基的.
+\begin{theorem}
+设
+$\mathbf{R}^n$的一组基为$\{v_1,\cdots,v_n\}$,则
+$\mathbf{R}^n\times \mathbf{R}^n$的一组基为
+$$\{(v_i,v_j):1\leq i,j\leq
+n\}=\{(v_{i},\mathbf{0})+(\mathbf{0},v_{j}):1\leq i,j\leq n\}.$$
+\end{theorem}
+\begin{proof}[\bf{证明}]
+ 首先,集合$\{(v_i,v_j):1\leq i,j\leq n\}$里的任意多个向量对都是线
+ 性无关的.这是因为,假如集合$\{(v_i,v_j):1\leq i,j\leq n\}$里存在一个向
+ 量对能被其它向量对线性表示,则该向量对的第一个向量也能被其它向量对的
+ 第一个向量线性表示,这与$\{v_1,\cdots,v_n\}$是
+ $\mathbf{R}^{n}$的一组基矛盾.\\\\
+
+下面我们来证明,$\mathbf{R}^n\times \mathbf{R}^n$里的任意一
+ 个向量对都可以用$\{(v_i,v_j):1\leq i,j\leq n\}$里的向量对进行线性表示.这
+ 是因为
+
+这样就证明了$\{(v_i,v_j):1\leq i,j\leq n\}$是$\mathbf{R}^n\times
+\mathbf{R}^n$的一组基.
+\end{proof}
+下面我们来证明一个引理.
+\begin{lemma}
+$\forall 1\leq i,j\leq n$,都存在相应的$1\leq p,q\leq n$,使得
+$dx_p\wedge dx_q(v_i,v_j)\neq 0$.
+\end{lemma}
+\begin{proof}[\textbf{证明}]
+假若存在$1\leq i,j\leq n$,使得对所有的$1\leq k,l\leq n$,都有
+$dx_k\wedge dx_l(v_i,v_j)=0$,则易得向量$v_{i}$和$v_j$线性相关,这与
+$\{v_1,\cdots,v_n\}$是$\mathbf{R}^n$的一组基矛盾.
+\end{proof}
+根据这个引理,可得
+\begin{theorem}
+对于任意$1\leq i,j\leq n$,都存在相应的实数$c_{i,j}$和相应的
+$1\leq p,q\leq n$,使得
+$$
+T(v_i,v_j)=c_{i,j}dx_p\wedge dx_q(v_i,v_j),
+$$
+\end{theorem}
+由于$\mathbf{R}^n\times \mathbf{R}^n$中的每个向量对都可以表示成
+$\{(v_i,v_j):1\leq i,j\leq n\}$里的向量对的线性组合,因此我们有如下结论:
+\begin{theorem}
+  每个二次形式$T:\mathbf{R}^n\times \mathbf{R}^n\to \mathbf{R}$都可以被集合$\{dx_i\wedge dx_j:1\leq i,j\leq n\}$里的二次形式进行线性表达.
+\end{theorem}
+
+

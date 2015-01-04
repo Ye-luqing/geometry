@@ -1,0 +1,176 @@
+﻿\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb} \usepackage{bm}
+\usepackage{draftwatermark,euler}
+\SetWatermarkText{http://blog.sciencenet.cn/u/Yaleking}%设置水印文字
+\SetWatermarkLightness{0.8}%设置水印亮度
+\SetWatermarkScale{0.35}%设置水印大小
+\usepackage{hyperref} \usepackage{geometry} \usepackage{yhmath}
+\usepackage{pstricks-add} \usepackage{framed,mdframed}
+\usepackage{graphicx,color} \usepackage{mathrsfs,xcolor}
+\usepackage[all]{xy} \usepackage{fancybox} \usepackage{xeCJK,csquotes}
+\usepackage{asymptote}
+\newtheorem*{theo}{定理} 
+\newtheorem*{exa}{}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip} 
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setlength\parindent{0pt}
+\newcommand{\ov}{\overrightarrow}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} \renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{Clifford对向量外积的解释}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992-),男,杭州师范大学理学院数学112.学
+      号:1002011005.E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+向量的外积是数学家在长期的数学实践中逐渐提炼出来的概念.正如很多数学概念
+一样,了解向量外积的历史发展过程,对于我们理解这个概念是有益的.在这篇短
+文里,我们来阐述 William Kingdon Clifford 对向量外积的解释.我
+只阐述Clifford的精神,而不打算使用他的符号以及词汇.\\
+
+\begin{figure}[h]
+  \centering \newrgbcolor{zzttqq}{0.6 0.2 0.}
+  \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt
+    0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+  \begin{pspicture*}(-1.86,-4.42)(8,6)
+    \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](0.,0.)(6.,2.)(7.,5.)(1.,3.)
+    \psline[linecolor=zzttqq](0.,0.)(6.,2.)
+    \psline[linecolor=zzttqq](6.,2.)(7.,5.)
+    \psline[linecolor=zzttqq](7.,5.)(1.,3.)
+    \psline[linecolor=zzttqq](1.,3.)(0.,0.)  \psline{->}(0.,0.)(6.,2.)
+    \psline{->}(0.,0.)(1.,3.)
+    \begin{scriptsize}
+      % \psdots[dotstyle=*,linecolor=darkgray](0.,0.)
+      \rput[bl](-0.28,-0.16){\blue{$A$}}
+      % \psdots[dotstyle=*,linecolor=blue](6.,2.)
+      \rput[bl](6.2,1.74){\blue{$B$}}
+      % \psdots[dotstyle=*,linecolor=blue](7.,5.)
+      \rput[bl](7.08,5.12){\blue{$C$}}
+      % \psdots[dotstyle=*,linecolor=blue](1.,3.)
+      \rput[bl](0.64,3.08){\blue{$D$}}
+    \end{scriptsize}
+  \end{pspicture*}\caption{}\label{fig:1}
+\end{figure}
+
+1878年,Clifford发表了著作\textit{Elements of Dynamic}.在这部著作
+的\href{http://ebooks.library.cornell.edu/cgi/t/text/pageviewer-idx?c=math;cc=math;idno=04370002;view=image;seq=104;size=100;page=root}{第三章},Clifford把平面区域的面积看成一个有方向的量.他用描述性
+的语言说, \blockquote{Every plane area is to be regarded as a directed
+  quantity.It is represented by a vector drawn perpendicular to its
+  plane,containing as many linear centimeters as there are square
+  centimeters in the area.The vector must be drawn towards that side
+  of the plane from which the area appears to be gone round
+  counter-clockwise.}  \blockquote{每个平面区域都将被视作一个有方向的
+  量,由和区域垂直的向量表示.其中向量的长度在数值上等于区域的面积,且区域
+  在向量所朝向的那一面是逆时针走向.}\\\\
+
+Clifford的表达模糊而朴素.但是我们可以将其意图表达的观念精确地应用到平行四边
+形区域的情形.如图\eqref{fig:1},平行四边形的邻边为$AB$和$AD$.平行四边形区域的
+边界有两种走向,它们分别是$A-B-C-D-A$,以及,$A-D-C-B-A$.当平行四边形
+以$A-B-C-D-A$为走向时,用右手四指环绕$A-B-C-D-A$,右手大拇指的方向为平行
+四边形对应的向量的方向,此时,向量的长度在数值上等于平行四边形的面积,为$|\ov{AB}||\ov{AD}|\sin\angle
+BAD$,向量记为$\ov{AB}\times \ov{AD}$.当平行四边形区域的边界以$A-D-C-B-A$为走向时,用
+右手四指环绕$A-D-C-B-A$,右手大拇指的方向为平行四边形对应的向量的方向,此
+时向量的长度依然为$|\ov{AB}||\ov{AD}|\sin\angle DAB$,向量记为
+$\ov{AD}\times\ov{AD}$.易得
+$$
+\ov{AB}\times \ov{AD}=-\ov{AD}\times \ov{AB}.
+$$
+
+
+Clifford在第三章着重证明了向量外积关于向量加法的分配律.我们知道,向量外
+积的其它基本性质都是平凡的,只有外积关于向量加法的分配律不是平凡的,我想
+这就是他为什么只叙述并证明这个定理的原因.他的证明是几何的,我不打算在此
+重叙之.取而代之的是,我在此叙述自己发现
+的证明.我的证明表明,{\color{red}向量外积关于向量加法分配律的本质,是平行四边形区域和平行四边形
+区域对应的向量之间存在对偶关系}.向量外积关于加法的分配律是说,
+\begin{equation}
+  \label{eq:1}
+  \ov{A'A}\times \ov{A'B}+\ov{A'A}\times \ov{A'C}=\ov{A'A}\times(\ov{A'B}+\ov{A'C}),
+\end{equation}
+其中 $A'$ 是空间中的任意一点.下面我们用汉语来说明式\eqref{eq:1}的正确
+性.我们看
+图\eqref{fig:2}.图\eqref{fig:2}是一个平行六面体,其中平行四边形$ABDC$和
+平行四边形$A'B'D'C'$是该平行六面体的两个底面.特别地,如果向
+量$\ov{A'A},\ov{A'B},\ov{A'C}$共面,则平行六面体退化成为平面图形.为了证
+明外积分配律,一个最重
+要的洞察是,平行四边形区域$A'ADD',C'CDD',A'ACC'$之间存在着类似于三角形三边
+的关系,确切地说,平行四边形$A'ADD',C'CDD',A'ACC'$围成了一个三角柱面,该
+三角柱面的底面分别是$\triangle ACD$和$\triangle A'C'D'$.这个三角柱面相
+当于一个三角形$W$,平行四边形区域$A'ADD',C'CDD',A'ACC'$相当于三角形$W$的三
+条边,平行四边形区域的面积相当于三角形$W$的边长,三个平行四边形区域两两之间
+形成的三个二面角相当于三角形$W$的三个内角.由于向量$\ov{A'A}\times
+\ov{A'B}$,$\ov{A'A}\times \ov{A'C}$,$\ov{A'A}\times
+(\ov{A'B}+\ov{A'C})$分别和平行四边形区域$C'CDD',A'ACC',A'ADD'$垂直,且
+向量的长度和各自所对应的平行四边形区域面积相等,因此向量$\ov{A'A}\times
+\ov{A'B}$,$\ov{A'A}\times \ov{A'C}$,$\ov{A'A}\times
+(\ov{A'B}+\ov{A'C})$可以首尾相接封闭成为三角形的三条边,于是有式\eqref{eq:1}成立,
+事实上,这三个向量首尾相接所封闭成的三角形正是三角形$W$的具体显化.这样我们就说明
+了向量外积关于向量加法分配律是成立的.
+\begin{figure}[h]
+  \centering
+\includegraphics[width=1\textwidth]{Clifford对向量外积和内积的解释-1+0_0.pdf}
+  \caption{}
+  \label{fig:2}
+\end{figure}
+\end{document}
+
+
+
+
+
+
+
+由于向
+量$\overrightarrow{A'A}\times \overrightarrow{A'C}$和平
+面$A'ACC'$垂直,向量$\overrightarrow{A'A}\times \overrightarrow{A'B}$和
+平面$A'ABB'$垂直,因此向量$\overrightarrow{A'A}\times
+\ov{A'C}$和$\ov{A'A}\times \ov{A'B}$之间的夹角大小等于二面
+角$A'ACC'-A'ABB'$的大小.图\eqref{fig:3}体现了这一点.
+
+
+
+
+
+
+
+
+
+\begin{figure}[h]
+  \centering \newrgbcolor{qqwuqq}{0. 0.392156862745 0.}
+  \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt
+    0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+  \begin{pspicture*}(-3.42,-5.64)(18.68,6.48)
+    \psline{->}(3.,3.24)(3.24,-1.72) \psline{->}(3.,3.24)(7.14,-0.84)
+    \rput[tl](0.46,1.1){$\overrightarrow{A'A}\times
+      \overrightarrow{A'C}$} \rput[tl](5.46,1.66){$\ov{A'A}\times
+      \ov{A'B}$}
+    \pscustom[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{
+      \parametricplot{-1.5224469401429936}{-0.7780990229537511}{0.6*cos(t)+3.|0.6*sin(t)+3.24}
+      \lineto(3.,3.24)\closepath} \rput[tl](3.3,3.74){$\alpha=\mbox{二
+        面角}A'AC'C-A'AB'B.$}
+    \begin{scriptsize}
+      \rput[bl](3.08,2.82){\qqwuqq{$\alpha$}}
+    \end{scriptsize}
+  \end{pspicture*}
+  \caption{}
+  \label{fig:3}
+\end{figure}
