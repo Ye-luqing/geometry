@@ -52,22 +52,50 @@
 \begin{exercise}
   Find a $2$- form which is not the product of $1$- forms.
 \end{exercise}
-\begin{proof}
-If $w$ and $v$ are two $1$-forms on  $T_{p}\mathbf{R}^4$,namely,
+\begin{proof}[Solve]
+We first prove that any $2$-form on $T_p\mathbf{R}^2$ can be expressed
+as the product of two $1$-forms.Any $2$- form on $T_p\mathbf{R}^2$ can
+be expressed as $a dx\wedge dy$,where $a$ is a real number.
 $$
-w=a_1dx+b_1dy+c_1dz+d_1du,v=a_2dx+b_2dy+c_2dz+d_2du,
+(a_{1}dx+b_{1}dy)\wedge (a_2dx+b_2dy)=(a_1b_2-b_{1}a_{2})dx\wedge dy.
+$$
+So let $a_1=a,b_2=1,b_1=0$ then we are done.\\\\
+
+Next we prove that any $2$- form on $T_p\mathbf{R}^3$ can be expressed
+as the product of two $1$-forms.Any $2$-form on $T_p\mathbf{R}^3$ can
+be expressed as $a dx\wedge dy+b dy\wedge dz+c dz\wedge dx$,where
+$a,b,c$ are real numbers.
+\begin{align*}
+&(a_1dx+b_1dy+c_1dz)\wedge (a_2dx+b_2dy+c_2dz)\\&=(a_1b_2-a_2b_1)dx\wedge
+dy+(b_1c_2-c_1b_2)dy\wedge dz+(c_1a_2-a_1c_2)dz\wedge dx.
+\end{align*}
+Let 
+$$
+\begin{cases}
+  a=a_1b_2-a_2b_1,\\
+b=b_1c_2-b_2c_1,\\
+c=c_1a_2-c_2a_1
+\end{cases}
 $$
 then 
+$$
+(b,c,a)=(a_1,b_1,c_1)\times (a_2,b_2,c_2).
+$$
+According to the geometrical interpretion of the vector product,we
+know that the solution $(a_1,b_1,c_1),(a_2,b_2,c_2)$ exists.\\\\
+
+Next we prove that there exist $2$- forms on $T_p\mathbf{R}^4$ such
+that it can not be expressed as the product of two $1$- forms.
 \begin{align*}
-w\wedge v=
+&(a_1dx+b_1dy+c_1dz+d_1dw)\wedge
+(a_2dx+b_2dy+c_2dz+d_2dw)\\&=(a_1b_2-a_2b_1)dx\wedge
+dy+(a_1c_2-a_2c_1)dx\wedge dz+(a_1d_2-a_2d_1)dx\wedge
+dw\\&+(b_1c_2-b_2c_1)dy\wedge dz+(b_1d_2-d_1b_2)dy\wedge
+dw+(c_1d_2-c_2d_1)dz\wedge dw,
 \end{align*}
-
+let $a_1b_2-a_2b_1=0$,then
+$$a_1c_2-a_2c_1:b_1c_2-b_2c_1=a_1d_2-a_2d_1:b_1d_2-d_1b_2,$$So the two
+form $dx\wedge dz+dx\wedge dw+dy\wedge dz+2dy\wedge dw+dz\wedge dw$ in
+$T_p\mathbf{R}^4$ can not be expressed as the product of two $1$- forms.
 \end{proof}
-
-
-
-
-
-% \bibliographystyle{unsrt}
-% \bibliography{}
 \end{document}
