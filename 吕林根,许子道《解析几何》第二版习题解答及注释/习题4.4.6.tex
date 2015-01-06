@@ -55,7 +55,58 @@
 \renewcommand{\captionlabeldelim}{}
 \setlength\parindent{0pt}
 \begin{document}
-\title{\huge{\bf{怎么理解二次形式}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\title{\huge{\bf{习题4.4.6}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
 \maketitle
-
+\begin{exercise}
+  已知椭球面
+  $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1(c<a<b)$,试求过$x$
+  轴并与曲面的交线是圆的平面.
+\end{exercise}
+\begin{proof}[\textbf{解}]
+设平面的方程为
+$$
+z=py.
+$$
+则要使得平面与椭球面的交线是圆,必须使$p\neq 0$.将平面方程代入椭球面
+方程,可得曲线的方程为
+$$
+\begin{cases}
+  \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1,\\
+z=py
+\end{cases}.
+$$
+即
+\begin{equation}\label{eq:1}
+\begin{cases}
+  \frac{x^2}{a^2}+(\frac{1}{b^2}+\frac{p^2}{c^2})y^2=1,\\
+z=py.
+\end{cases}
+\end{equation}
+在$XOY$平面上,
+$$
+\frac{x^2}{a^2}+(\frac{1}{b^2}+\frac{p^2}{c^2})y^2=1
+$$
+的两条半轴长度分别为
+$$
+a,\frac{1}{\sqrt{\frac{1}{b^2}+\frac{p^2}{c^2}}}.
+$$
+两条半轴依次投影到$z=py$平面上,得到的线段的长度依次为
+$$
+|p|a,\frac{1}{\sqrt{\frac{1}{b^2}+\frac{p^2}{c^2}}}.
+$$
+令
+$$
+|p|a=\frac{1}{\sqrt{\frac{1}{b^2}+\frac{p^2}{c^2}}},
+$$
+即
+$$
+\frac{1}{c^2}p^4+\frac{1}{b^2}p^2-\frac{1}{a^2}=0.
+$$
+解得
+$$
+p^2=\frac{-\frac{1}{b^2}+\sqrt{\frac{1}{b^4}+\frac{4}{c^2a^2}}}{\frac{2}{c^2}}=\frac{-\frac{c^2}{b^2}+\sqrt{\frac{c^4}{b^4}+\frac{4c^2}{a^2}}}{2}
+$$
+于是可以轻易地得到$p$的两个解.这样我们就确定了平面,使得曲线
+\eqref{eq:1}是一个圆.
+\end{proof}
 \end{document}
