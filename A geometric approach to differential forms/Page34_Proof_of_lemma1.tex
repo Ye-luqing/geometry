@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm,euler}
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{amsfonts}
+\usepackage{graphicx,color}
+\usepackage{mathrsfs}
+\usepackage[all]{xy}
+\usepackage{fancybox}
+\newtheorem*{theo}{Theorem}
+\newtheorem*{exe}{Exercise}
+\newtheorem*{rem}{Remark}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{coro}{Corollary}
+\newtheorem*{exa}{Example}
+\newenvironment{lemma}
+{\bigskip\begin{mdframed}\begin{lem}}
+    {\end{lem}\end{mdframed}\bigskip}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\begin{lemma}
+If $\alpha$ and $\beta$ are $1$-forms on $T_p\mathbf{R}^3$ and $V$ is
+a nonzero vector in the plane spanned by $\langle \alpha\rangle$ and
+$\langle \beta\rangle$,then there is a vector,$W$,in this plane such
+that 
+\begin{equation}\label{eq:1}
+\alpha\wedge \beta=\langle V\rangle^{-1}\wedge \langle W\rangle ^{-1}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $V_1,V_2$ be two linearly independent vectors in
+$T_p\mathbf{R}^3$.In order to prove formula \eqref{eq:1},we only need
+to prove that there exists $W$ in the plane spanned by $\langle
+\alpha\rangle$ and $\langle\beta\rangle$ such that
+$$
+\alpha\wedge \beta(V_1,V_2)=\langle V\rangle^{-1}\wedge \langle W\rangle ^{-1}(V_1,V_2).
+$$
+
+\end{proof}
+\end{document}
