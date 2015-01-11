@@ -79,12 +79,12 @@ $\langle w\rangle$和向量$\langle v\rangle$未必是正交的,如图所
 
 以向量$OP',OP$为邻边,张成了一个平行四边形.该平行四边形的面积,再除以向
 量$\frac{\langle w\rangle}{|\langle w\rangle|}$和$\frac{\langle
-  v\rangle}{|\langle v\rangle|}$张成的平行四边形的面积,就是$w\wedge v(V_1,V_2)$.
+  v\rangle}{|\langle v\rangle|}$张成的平行四边形的面积,就是$w\wedge v(V_1,V_2)$.\\
 \begin{figure}[h]
 \newrgbcolor{xdxdff}{0.490196078431 0.490196078431 1.}
 \newrgbcolor{zzttqq}{0.6 0.2 0.}
 \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
-\begin{pspicture*}(0,-5.82)(22.8,6.3)
+\begin{pspicture*}(0,-5.82)(22.8,4.3)
 \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](3.64,0.58)(6.36375433438,1.81169773209)(11.12,0.28)(7.80130856527,-0.936409053446)
 \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](3.64,0.58)(7.7995583136,2.4609767374)(9.5,1.92)(5.25188613453,-0.00738223546567)
 \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](3.64,0.58)(9.5,1.92)(16.04,1.74)(11.12,0.28)
@@ -126,4 +126,11 @@ $\langle w\rangle$和向量$\langle v\rangle$未必是正交的,如图所
   \caption{}
   \label{fig:1}
 \end{figure}
+
+下面我们根据对一次形式楔积的几何解释,来说明为什么一次形式的楔积具有分
+配律.也就是,为什么会有
+$$
+w\wedge (v_1+v_2)=w\wedge v_1+w\wedge v_2,
+$$
+其中$v_2=c_1dx_1+c_2dx_2+\cdots+c_ndx_n$.
 \end{document}
