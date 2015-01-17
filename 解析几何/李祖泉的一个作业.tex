@@ -1,0 +1,115 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm,euler}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newtheorem*{lemma}{引理}
+\newtheorem*{coro}{推论}
+\newtheorem*{exa}{例}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\setlength\parindent{0pt}
+\begin{document}
+\title{\huge{\bf{李祖泉的一个题}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+\begin{exercise}
+在空间中,设$xOy$平面上有圆心在$x$正半轴且过$O$的圆.一条动直线与此圆交
+于$A$点,与$z$轴交于点$B$.且满足
+$$
+|OA|=k|OB|,
+$$
+$k$为一个正常数.求此动直线所产生的曲面方程.
+\end{exercise}
+\begin{proof}[\textbf{解}]
+设圆的圆心为$(a,0,0)$,其中$a$是个正常数.则圆的方程为
+\begin{equation}\label{eq:1}
+\begin{cases}
+z=0\\
+(x-a)^2+y^2=a^2.
+\end{cases}
+\end{equation}
+设点$A$的坐标为$(x_A,y_A,0)$,设点$B$的坐标为$(0,0,b)$.则点$A$满足方程
+\eqref{eq:1},也即,
+\begin{equation}\label{eq:1.5}
+  x_A^2-2ax_A+y_{A}^2=0.
+\end{equation}
+且由题意,
+\begin{equation}\label{eq:2}
+x_A^2+y_A^2=k^2b^2.
+\end{equation}
+结合方程\eqref{eq:1.5}和\eqref{eq:2},可得
+\begin{equation}
+  \label{eq:2.5}
+  2ax_A=k^2b^2.
+\end{equation}
+经过点$A,B$的直线方程为
+\begin{equation}\label{eq:3}
+\frac{x}{x_A}=\frac{y}{y_A}=\frac{z-b}{-b}=t.
+\end{equation}
+将式\eqref{eq:3}代入式\eqref{eq:1.5},可得
+$$
+  (\frac{x}{t})^2-2a \frac{x}{t}+(\frac{y}{t})^2=0,
+$$
+即
+\begin{equation}
+  \label{eq:4}
+  x^2-2axt+y^2=0.
+\end{equation}
+将方程\eqref{eq:3}代入方程\eqref{eq:2.5},可得
+\begin{equation}
+  \label{eq:5}
+  2a \frac{x}{t}=k^2b.
+\end{equation}
+由方程\eqref{eq:3}可得
+\begin{equation}
+  \label{eq:6}
+  
+\end{equation}
+
+\end{proof}
+\end{document}
