@@ -60,34 +60,41 @@
 在此我们探讨$\mathbf{R}^n$中平行四边形的面积.设
 $\mathbf{a}=(a_1,a_2,\cdots,a_n)\in
 \mathbf{R}^n$,$\mathbf{b}=(b_1,b_2,\cdots,b_n)\in \mathbf{R}^n$,我们来
-计算$\mathbf{R}^n$中以$\mathbf{a},\mathbf{b}$为邻边张成的平行四边形$S$的
-面积.易得其面积的平方为
-{\small\begin{equation}\label{eq:1}
+计算$\mathbf{R}^n$中$\mathbf{a},\mathbf{b}$张成的平行四边形$S$的
+面积的平方.所谓$\mathbf{a},\mathbf{b}$张成的平行四边形$S$,指的是如图
+\eqref{fig:1}所示.
+\begin{figure}[h]
+\newrgbcolor{zzttqq}{0.6 0.2 0.}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-4.3,-5.82)(8,4.3)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](3.,4.)(7.,4.)(5.,-2.)(1.,-2.)
+\psline[linecolor=zzttqq](3.,4.)(7.,4.)
+\psline[linecolor=zzttqq](7.,4.)(5.,-2.)
+\psline[linecolor=zzttqq](5.,-2.)(1.,-2.)
+\psline[linecolor=zzttqq](1.,-2.)(3.,4.)
+\psline{->}(1.,-2.)(5.,-2.)
+\psline{->}(1.,-2.)(3.,4.)
+\rput[tl](2.74,-2.08){$\mathbf{a}$}
+\rput[tl](1.46,1.82){$\mathbf{b}$}
+\end{pspicture*}
+  \caption{}
+  \label{fig:1}
+\end{figure}
+
+
+易得平行四边形$S$面积的平方为
+\begin{equation}\label{eq:1}
 ||\mathbf{a}||^{2}||\mathbf{b}||^2-(\mathbf{a}\cdot
 \mathbf{b})^2=(a_1^2+a_2^2+\cdots+a_n^2)(b_1^2+b_2^2+\cdots+b_n^2)-(a_1b_1+a_2b_2+\cdots+a_nb_n)^2=\sum_{1\leq
   i<j\leq n}(a_ib_j-a_jb_i)^2.
-\end{equation}}
-我们惊讶地发现,$(a_ib_j-a_jb_i)^2$是$\mathbf{a},\mathbf{b}$张成的平行
-四边形在$x_iOx_{j}$坐标平面的正投影得到的平行四边形的面积的平方,这样,我们
-可以认为式\eqref{eq:1}表达的,和勾股定理很类似,可以看作是面积之间的“勾股定理”.\\
+\end{equation}
+我们发现,$(a_ib_j-a_jb_i)^2$是平行四边形$S$在$x_iOx_{j}$坐标平面的正投影得到的平行四边形的面积的平方,这样,我们
+可以认为式\eqref{eq:1}表达的,和高维空间中的勾股定理很类似,可以看作是面积之间的“勾股定理”.\\
 
-下面我们从几何角度来阐述式\eqref{eq:1}.设平行四边形$S$所在的平面与坐标
-平面$x_iOx_j$的夹角为$\alpha_{i,j}$.平行四边形$S$正投影到$x_iOx_{j}$平
-面上,得到平行四边形$S_{i,j}$.然后平行四边形$S_{i,j}$反过来又正投影到平行
-四边形$S$所在平面上.易得$S_{i,j}$在$S$平面上正投影所得的图形$S_{i,j}'$
-是完全含于$S$的,且$S_{i,j}'$也是个平行四边形.且$S_{i,j}'$的面积为
-$S\cos^2\alpha_{i,j}$.且由于$\mathbf{R}^{n}$中过二维平面外一点有且仅有一条
-直线与平面垂直,因此当$m\neq i$,$m\neq
-j$,$w\neq i$,$w\neq j$这四种情况只要发生一种,便有图形$S_{i,j}'\cap
-S_{m,n}'$的面积为$0$.而且$\cup_{1\leq i<j\leq n}S'_{i,j}=S$.于是,
-$$
-\sum_{1\leq i<j\leq n}S\cos^{2}\alpha_{ij}=S.
-$$
-也即,
-$$
-\sum_{1\leq i<j\leq n}\left(S\cos\alpha_{ij}\right)^{2}=S^2.
-$$
-这就是式\eqref{eq:1}.这样我们就给出了式\eqref{eq:1}的几何解释.
+下面我们从更加几何化的角度来剖析式\eqref{eq:1}.讨论平行四边形$S$在$\mathbf{R}^n$的$n\choose 2$个互相垂
+直的二维坐标平面上正投影的问题,在某种意义下,和讨论$\mathbf{R}^{n\choose 2}$空间中的线段$S'$在各个互相垂直的坐标轴上正投影的问题是一样的.因此为了从几何上证明式\eqref{eq:1},我们只用证明,$\mathbf{R}^{n\choose 2}$中经
+过原点的线段的长度之平方,等于其在各个互相垂直的坐标轴上正投影得到的线
+段之平方的和.而这正是$\mathbf{R}^{n\choose 2}$中的勾股定理.
 \end{document}
 
 
@@ -132,3 +139,43 @@ $$
 \omega\wedge\nu=\sum_{1\leq i<j\leq n}(a_ib_j-a_jb_i) dx_i\wedge dx_j.
 $$
 这和式\eqref{eq:1}应该有比较大的关系.我们知道,
+
+
+
+
+
+
+
+
+
+设平行四边形$S$所在的平面与坐标
+平面$x_iOx_j$的夹角为$\alpha_{i,j}$.平行四边形$S$正投影到$x_iOx_{j}$平
+面上,得到平行四边形$S_{i,j}$.然后平行四边形$S_{i,j}$反过来又正投影到平行
+四边形$S$所在平面上.易得$S_{i,j}$在$S$平面上正投影所得的图形$S_{i,j}'$
+是完全含于$S$的,且$S_{i,j}'$也是个平行四边形.且$S_{i,j}'$的面积为
+$S\cos^2\alpha_{i,j}$.且由于$\mathbf{R}^{n}$中过二维平面外一点有且仅有一条
+直线与平面垂直,因此当$m\neq i$,$m\neq
+j$,$w\neq i$,$w\neq j$这四种情况只要发生一种,便有图形$S_{i,j}'\cap
+S_{m,n}'$的面积为$0$.而且$\cup_{1\leq i<j\leq n}S'_{i,j}=S$.于是,
+$$
+\sum_{1\leq i<j\leq n}S\cos^{2}\alpha_{ij}=S.
+$$
+也即,
+$$
+\sum_{1\leq i<j\leq n}\left(S\cos\alpha_{ij}\right)^{2}=S^2.
+$$
+这就是式\eqref{eq:1}.这样我们就给出了式\eqref{eq:1}的几何解释.
+
+
+
+
+
+
+
+
+为了讨论的简单性,不妨让平行四边
+形$S$所在的二维平面通过平移而经过$\mathbf{R}^n$的原点,而且平移使得平行四边形$S$
+的内部某点与原点重合.之所以可以这样假设,是因为平行
+四边形的平移并不影响其在各个坐标平面上的投影.\\
+
+在这样的假设下,
