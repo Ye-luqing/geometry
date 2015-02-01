@@ -66,7 +66,7 @@ $\mathbf{a}_1,\mathbf{a}_2,\cdots,\mathbf{a}_m$张成的一个平行体.\\
 $\mathbf{a}_1,\mathbf{a}_2,\cdots,\mathbf{a}_m$张成的一个平行体.$B$是
 $\mathbf{R}^n$中由$m$个线性无关的向量
 $\mathbf{b}_1,\mathbf{b}_2,\cdots,\mathbf{b}_m$张成的一个平行体.其中
-$m< n$.\\
+$m<n$.\\
 
 当$\mathbf{b}_1,\mathbf{b}_2,\cdots,\mathbf{b}_m$是两两正
 交的向量时.设向量$\mathbf{a}_j$在
@@ -137,10 +137,14 @@ $$
 \end{vmatrix}
 \end{equation}
 等于$\mathbf{a}_1',\mathbf{a}_2',\cdots,\mathbf{a}_m'$张成的平行体
+的有向体积,除以$\det (\mathbf{e}_1,\mathbf{e}_2,\cdots,\mathbf{e}_m)$,再乘以$\mathbf{b}_1',\mathbf{b}_2',\cdots,\mathbf{b}_m'$张
+成的平行体的有向体积,再除以$\det
+(\mathbf{e}_1,\mathbf{e}_2,\cdots,\mathbf{e}_m)$.也就是说,等于$\mathbf{a}_1',\mathbf{a}_2',\cdots,\mathbf{a}_m'$张成的平行体
 的有向体积,再乘以$\mathbf{b}_1',\mathbf{b}_2',\cdots,\mathbf{b}_m'$张
 成的平行体的有向体积.
 \\
 
 当$\mathbf{b}_1,\mathbf{b}_2,\cdots,\mathbf{b}_m$并非都是两两正交向量
-时,根据行列式的性质,上述结论仍然成立.
+时,可以利用Gram-Schimit 方法将
+$\{\mathbf{b}_1,\mathbf{b}_2,\cdots,\mathbf{b}_m\}$正交化.根据行列式的性质,上述结论仍然成立.
 \end{document}
