@@ -1,0 +1,146 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm,euler}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newtheorem*{lemma}{引理}
+\newtheorem*{coro}{推论}
+\newtheorem*{exa}{例}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{FZQingKeBenYueSongS-R-GB}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\setlength\parindent{0pt}
+\begin{document}
+\title{\huge{\bf{$n$维空间中两个$m$维平行体之间的投影}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+设$\mathbf{a}_1,\mathbf{a}_2,\cdots,\mathbf{a}_m$是$\mathbf{R}^n$中的$m$个向量.集合
+$$\left\{p_1\mathbf{a}_1+p_2\mathbf{a}_2+\cdots+p_m\mathbf{a}_m:p_1,p_2,\cdots,p_m\geq 0,p_1+p_2+\cdots+p_m\leq
+1\right\}$$叫做$\mathbf{R}^{n}$中由向量
+$\mathbf{a}_1,\mathbf{a}_2,\cdots,\mathbf{a}_m$张成的一个平行体.\\
+
+设$A$是$\mathbf{R}^{n}$中由$m$个线性无关的向量
+$\mathbf{a}_1,\mathbf{a}_2,\cdots,\mathbf{a}_m$张成的一个平行体.$B$是
+$\mathbf{R}^n$中由$m$个线性无关的向量
+$\mathbf{b}_1,\mathbf{b}_2,\cdots,\mathbf{b}_m$张成的一个平行体.其中
+$m< n$.\\
+
+当$\mathbf{b}_1,\mathbf{b}_2,\cdots,\mathbf{b}_m$是两两正
+交的向量时.设向量$\mathbf{a}_j$在
+$\mathbf{b}_1,\mathbf{b}_2,\cdots,\mathbf{b}_m$张成的子空间上的正投影为
+$\mathbf{a}_j'$,易得$\mathbf{a}_j'$是存在且唯一的,而且$\forall 1\leq
+i,j\leq m$,
+$$
+(\mathbf{a}_j-\mathbf{a}_j')\cdot \mathbf{b}_i=0.\iff \mathbf{a}_j\cdot\mathbf{b}_i=\mathbf{a}_j'\cdot\mathbf{b}_i.
+$$
+\iffalse
+于是,
+$$
+\begin{cases}
+  \mathbf{a}_1'\cdot \mathbf{b}_1=\mathbf{a}_1\cdot \mathbf{b}_1\\
+\mathbf{a}_1'\cdot \mathbf{b}_2=\mathbf{a}_1\cdot \mathbf{b}_2,\\
+\vdots\\
+\mathbf{a}_1'\cdot \mathbf{b}_m=\mathbf{a}_1\cdot \mathbf{b}_m.
+\end{cases}
+$$
+\fi
+设
+$\mathbf{a}_j'=x_{1j}\mathbf{b}_1+x_{2j}\mathbf{b}_2+\cdots+x_{mj}\mathbf{b}_m$,
+代入上面的关系式,可得$x_{ij}||b_i||^2=\mathbf{a}_j\cdot
+\mathbf{b}_i$.令$\mathbf{e}_i=\frac{\mathbf{b}_i}{||\mathbf{b}_i||}$,
+可得$x_{ij}=\mathbf{a}_j\mathbf{e}_i$.于是
+$$
+\begin{cases}
+  \mathbf{a}_1'=(\mathbf{a}_1\cdot
+  \mathbf{e}_1)\mathbf{e}_1+(\mathbf{a}_1\cdot
+  \mathbf{e}_2)\mathbf{e}_2+\cdots+(\mathbf{a}_1\cdot
+  \mathbf{e}_m)\mathbf{e}_m,\\
+  \mathbf{a}_2'=(\mathbf{a}_2\cdot
+  \mathbf{e}_1)\mathbf{e}_1+(\mathbf{a}_2\cdot
+  \mathbf{e}_2)\mathbf{e}_2+\cdots+(\mathbf{a}_2\cdot
+  \mathbf{e}_m)\mathbf{e}_m,\\
+\vdots\\
+  \mathbf{a}_m'=(\mathbf{a}_m\cdot
+  \mathbf{e}_1)\mathbf{e}_1+(\mathbf{a}_m\cdot
+  \mathbf{e}_2)\mathbf{e}_2+\cdots+(\mathbf{a}_m\cdot
+  \mathbf{e}_m)\mathbf{e}_m.
+\end{cases}
+$$
+可见,由$\mathbf{a}_1',\mathbf{a}_2',\cdots,\mathbf{a}_m'$张成的平行体
+的有向体积为行列式
+\begin{equation}\label{eq:1}
+\begin{vmatrix}
+  \mathbf{a}_1\cdot \mathbf{e}_1&\mathbf{a}_1\cdot
+  \mathbf{e}_2&\cdots&\mathbf{a}_1\cdot \mathbf{e}_m\\
+  \mathbf{a}_2\cdot \mathbf{e}_1&\mathbf{a}_2\cdot
+  \mathbf{e}_2&\cdots&\mathbf{a}_2\cdot \mathbf{e}_m\\
+\vdots&\vdots&\ddots&\vdots\\
+  \mathbf{a}_m\cdot \mathbf{e}_1&\mathbf{a}_m\cdot
+  \mathbf{e}_2&\cdots&\mathbf{a}_m\cdot \mathbf{e}_m\\
+\end{vmatrix}
+\end{equation}
+再乘以行列式$\det (\mathbf{e}_1,\mathbf{e}_2,\cdots,\mathbf{e}_m)$.于
+是,
+\begin{equation}
+  \label{eq:2}
+  \begin{vmatrix}
+  \mathbf{a}_1\cdot \mathbf{b}_1&\mathbf{a}_1\cdot
+  \mathbf{b}_2&\cdots&\mathbf{a}_1\cdot \mathbf{b}_m\\
+  \mathbf{a}_2\cdot \mathbf{b}_1&\mathbf{a}_2\cdot
+  \mathbf{b}_2&\cdots&\mathbf{a}_2\cdot \mathbf{b}_m\\
+\vdots&\vdots&\ddots&\vdots\\
+  \mathbf{a}_m\cdot \mathbf{b}_1&\mathbf{a}_m\cdot
+  \mathbf{b}_2&\cdots&\mathbf{a}_m\cdot \mathbf{b}_m\\
+\end{vmatrix}
+\end{equation}
+等于$\mathbf{a}_1',\mathbf{a}_2',\cdots,\mathbf{a}_m'$张成的平行体
+的有向体积,再乘以$\mathbf{b}_1',\mathbf{b}_2',\cdots,\mathbf{b}_m'$张
+成的平行体的有向体积.
+\\
+
+当$\mathbf{b}_1,\mathbf{b}_2,\cdots,\mathbf{b}_m$并非都是两两正交向量
+时,根据行列式的性质,上述结论仍然成立.
+\end{document}

@@ -1,0 +1,109 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm,euler}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newtheorem*{lemma}{引理}
+\newtheorem*{coro}{推论}
+\newtheorem{exa}{例}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\setlength\parindent{0pt}
+\begin{document}
+\title{\huge{\bf{Cauchy-Binet公式的几何意义}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+Cauchy-Binet公式是指:
+\begin{theorem}[Cauchy-Binet]
+设$A$是$\mathbf{R}$上的一个$n\times N$矩阵,$B$是$\mathbf{R}$上的一个
+$N\times n$矩阵.则我们知道$AB$是一个$n\times n$的方阵.当$n\leq N$时,
+$$
+\det(AB)=\sum_{\sigma}\det(A_{\sigma})\det(B^{\sigma}),
+$$
+其中
+$\sigma=\{\sigma_1,\sigma_2,\cdots,\sigma_n\}$.其中$1\leq\sigma_1<\sigma_{2}<\cdots<\sigma_{n}\leq
+n$.而且$A_{\sigma}$是矩阵$A$中删去所有行列(除了下标位于
+$\sigma$中的行与列)得到的矩阵.$B^{\sigma}$也一样.
+\end{theorem}
+首先我们建立任意两个矩阵乘法与方阵乘法的关系.为此先举一个例子.
+\begin{example}\label{example:1}
+设$A=
+\begin{pmatrix}
+a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}
+\end{pmatrix}
+$,$B=
+\begin{pmatrix}
+  b_{11}&b_{12}\\
+b_{21}&b_{22}\\
+b_{31}&b_{32}
+\end{pmatrix}
+$.且$A'=
+\begin{pmatrix}
+  a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}\\
+0&0&0
+\end{pmatrix}
+$,$B'=
+\begin{pmatrix}
+  b_{11}&b_{12}&0\\
+b_{21}&b_{22}&0\\
+b_{31}&b_{32}&0
+\end{pmatrix}
+$.即矩阵$A',B'$分别是矩阵$A,B$在最右列和最后一行加了一列$0$和一行$0$.则
+$$
+A'B'=
+\begin{pmatrix}
+a_{11}b_{11}+a_{12}b_{21}+a_{13}b_{31}&a_{11}b_{12}+a_{12}b_{22}+a_{13}b_{32}&0\\
+a_{21}b_{11}+a_{22}b_{21}+a_{23}b_{31}&a_{21}b_{12}+a_{22}b_{22}+a_{23}b_{32}&0\\
+0&0&0
+\end{pmatrix}.
+$$
+我们发现,矩阵$A'B'$恰好是矩阵$AB$在最右列和最后一行加了一行$0$和一列$0$.
+\end{example}
+例\eqref{example:1}完全可以推广到一般情形.不再熬述了.这个例子说明,
+\end{document}
