@@ -1,0 +1,97 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newtheorem*{lemma}{引理}
+\newtheorem*{coro}{推论}
+\newtheorem*{exa}{例}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\setlength\parindent{0pt}
+\begin{document}
+\title{\huge{\bf{$\mathbf{R}^4$中二维平面的位置关系}}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+四维空间直角坐标系$\mathbf{R}^4$中的任意一个二维平面的方程形如
+$$
+\begin{cases}
+  A_1x+B_1y+C_1z+D_1w+E_1=0,\\
+  A_2x+B_2y+C_2z+D_2w+E_2=0.
+\end{cases}
+$$
+也就是说,$\mathbf{R}^{4}$中的任意一个二维平面定义为$\mathbf{R}^{4}$中
+两个三维体的交.实际上,$\mathbf{R}^4$中任何两个不同的三维体不是平行,就
+是相交.对于$\mathbf{R}^4$中的两个二维平面
+\begin{equation}\label{eq:1}
+\begin{cases}
+  A_1x+B_1y+C_1z+D_1w+E_1=0,\\
+  A_2x+B_2y+C_2z+D_2w+E_2=0.
+\end{cases}
+\end{equation}
+和
+\begin{equation}
+  \label{eq:2}
+\begin{cases}
+  M_1x+N_1y+P_1z+Q_1w+T_1=0,\\
+M_2x+N_2y+P_2z+Q_2w+T_2=0.
+\end{cases}
+\end{equation}
+当行列式
+$$
+\begin{vmatrix}
+  A_1&B_1&C_1&D_1\\
+A_2&B_2&C_2&D_2\\
+M_1&N_1&P_1&Q_1\\
+M_2&N_2&P_2&Q_2
+\end{vmatrix}\neq 0
+$$
+时,平面\eqref{eq:1}和平面\eqref{eq:2}交于一个点.否则,平面\eqref{eq:1}
+和\eqref{eq:2}的方程联立之后,可能无解,也可能有无限个解.当无解时,说明两
+平面平行.当有无限解时,说明两平面交于一直线.注意$\mathbf{R}^4$中的两平
+面不可能异体.因为异体至少要求维数达到$2+2+1=5$.
+\end{document}
